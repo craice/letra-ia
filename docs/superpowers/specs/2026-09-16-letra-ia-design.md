@@ -185,9 +185,49 @@ funciona. `type` desconhecido mostra mensagem amigável e botão de voltar.
   de novo. Acerto mostra `resultPreview` em cartão que imita resposta de IA.
 - Acessibilidade: teclado completo, foco visível, `aria-live` no feedback, contraste AA,
   `prefers-reduced-motion`.
-- Paleta em variáveis CSS, tema claro e escuro pelo sistema. Sem imagens pesadas; SVG ou
-  emoji. Deve carregar rápido em 3G.
-- Identidade visual definida na implementação com o skill frontend-design.
+- Sem imagens pesadas; SVG ou emoji. Deve carregar rápido em 3G.
+
+### Identidade visual: "editorial calma"
+
+Inspirada no clima do site da Anthropic (papel, serifa, terracota, ilustração de linha,
+muito espaço), sem usar logo, nome, marca ou qualquer elemento que sugira produto oficial.
+O jogo é neutro entre ferramentas.
+
+**Tipografia (Google Fonts, ou hospedadas no repositório):**
+- Newsreader (serifa) para quase tudo: títulos, textos, falas do mascote, opções de prompt.
+  Itálico para subtítulos e frases de apoio.
+- Instrument Sans (sem-serifa) só para rótulos pequenos em caixa alta ("Capítulo 2 · Fase 3
+  de 6"), botões e números.
+- Tamanho base generoso; títulos com espaçamento de letras levemente negativo.
+
+**Paleta (variáveis CSS):**
+
+| Papel | Cor | Uso |
+|---|---|---|
+| fundo | `#F0EEE6` | fundo da página |
+| cartão | `#FAF9F5` | cartões, balões, opções |
+| linha | `#DEDBD0` | bordas finas de 1px |
+| texto | `#141413` | texto principal, botão primário |
+| texto suave | `#5E5D59` | apoio, rótulos |
+| destaque | `#D97757` | progresso, seleção, estrelas, botão de ação, brilho do mascote |
+| acerto | `#788C5D` | feedback de sucesso |
+| apoio | `#6A9BCC` | detalhes ocasionais em ilustrações |
+| erro | tom terroso avermelhado, definido na implementação | feedback de erro, sempre com ícone e texto |
+
+Tema escuro na v1 fica **fora de escopo**: a identidade depende do papel creme. Apenas
+`prefers-reduced-motion` é respeitado.
+
+**Formas:** cartões com raio de 12 a 14px e borda de 1px, sem sombra forte. Botões em
+pílula. Barra de progresso fina (3px). Fases no mapa como pontos pequenos, preenchidos em
+terracota quando concluídos.
+
+**Mascote:** rosto redondo em traço fino de 1,5px na cor do texto, fundo do cartão, três
+raios curtos em terracota no topo. Quatro expressões trocam apenas boca e olhos.
+
+**Ilustrações dos cartões de explicação:** traço de linha fina monocromático com um toque
+de terracota, no mesmo estilo do mascote. Emoji como fallback aceitável.
+
+Mockup de referência: `.superpowers/brainstorm/*/content/visual-style-v2.html`, variação B.
 
 ## 8. Testes
 
