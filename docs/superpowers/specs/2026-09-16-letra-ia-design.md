@@ -227,7 +227,7 @@ raios curtos em terracota no topo. Quatro expressões trocam apenas boca e olhos
 **Ilustrações dos cartões de explicação:** traço de linha fina monocromático com um toque
 de terracota, no mesmo estilo do mascote. Emoji como fallback aceitável.
 
-Mockup de referência: `.superpowers/brainstorm/*/content/visual-style-v2.html`, variação B.
+Mockup de referência: `docs/superpowers/specs/2026-09-16-letra-ia-visual-mockup.html`, variação B.
 
 ## 8. Testes
 
