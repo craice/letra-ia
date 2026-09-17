@@ -28,7 +28,9 @@ export function loadChapters(): LoadedChapter[] {
     const data = files.get(id);
     if (data === undefined) return { id, chapter: null, errors: [`file "${id}.json" not found`] };
     const errors = validateChapter(data);
-    if ((data as Chapter).id !== id) errors.push(`chapter id "${(data as Chapter).id}" does not match file "${id}"`);
+    if (errors.length === 0 && (data as Chapter).id !== id) {
+      errors.push(`chapter id "${(data as Chapter).id}" does not match file "${id}"`);
+    }
     return { id, chapter: errors.length === 0 ? (data as Chapter) : null, errors };
   });
 
