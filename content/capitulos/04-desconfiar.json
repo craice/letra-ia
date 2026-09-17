@@ -38,7 +38,7 @@
         {
           "text": "Me ajude a escrever uma mensagem curta e educada perguntando ao posto de saúde do bairro qual é o horário de atendimento.",
           "correct": true,
-          "feedback": "Aqui você usa a IA para o que ela faz bem, escrever o texto, e vai buscar o fato em quem tem a informação certa: o próprio posto."
+          "feedback": "Aqui você usa a IA para o que ela faz bem: escrever o texto. E vai buscar o fato em quem tem a informação certa, o próprio posto."
         },
         {
           "text": "Confirme se o posto de saúde do Jardim América abre aos sábados.",
