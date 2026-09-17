@@ -2,6 +2,7 @@
   import Start from './screens/Start.svelte';
   import Map from './screens/Map.svelte';
   import Phase from './screens/Phase.svelte';
+  import Certificate from './screens/Certificate.svelte';
   import { loadChapters, validChapters } from './lib/content/load';
   import { progressStore } from './lib/progress';
   import { isAllComplete, nextPhaseId } from './lib/progress/unlock';
@@ -52,5 +53,5 @@
 {:else if screen.name === 'phase'}
   <Phase {chapters} phaseId={screen.phaseId} onComplete={completePhase} onBack={goToMap} />
 {:else}
-  <p class="page">Certificado (em construção)</p>
+  <Certificate {chapters} progress={progressStore.progress} onSetName={(n) => progressStore.setPlayerName(n)} onHome={() => (screen = { name: 'start' })} />
 {/if}
