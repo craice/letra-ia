@@ -1,5 +1,6 @@
 <script lang="ts">
   import Start from './screens/Start.svelte';
+  import Map from './screens/Map.svelte';
   import { loadChapters, validChapters } from './lib/content/load';
   import { progressStore } from './lib/progress';
   import { isAllComplete, nextPhaseId } from './lib/progress/unlock';
@@ -46,7 +47,7 @@
 {#if screen.name === 'start'}
   <Start {hasProgress} onStart={start} onReset={reset} />
 {:else if screen.name === 'map'}
-  <p class="page">Mapa (em construção) <button onclick={() => openPhase(chapters[0]!.phases[0]!.id)}>abrir 1ª fase</button></p>
+  <Map {loaded} {chapters} progress={progressStore.progress} onOpenPhase={openPhase} onHome={() => (screen = { name: 'start' })} />
 {:else if screen.name === 'phase'}
   <p class="page">Fase {screen.phaseId} <button onclick={() => completePhase((screen as { phaseId: string }).phaseId, 1)}>concluir</button></p>
 {:else}
