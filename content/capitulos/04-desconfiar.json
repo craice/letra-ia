@@ -1,0 +1,183 @@
+{
+  "id": "04-desconfiar",
+  "title": "Desconfiar na hora certa",
+  "icon": "🧭",
+  "phases": [
+    {
+      "id": "c4-alucinacao",
+      "type": "explanation",
+      "title": "Quando a IA inventa",
+      "cards": [
+        {
+          "title": "Ela pode inventar com toda a calma",
+          "text": "Chamam isso de alucinação: a IA escreve uma resposta bonita, bem redigida e falsa. Ela não mente de propósito, ela completa o texto do jeito que parece certo. Segurança na voz não é sinal de acerto.",
+          "illustration": "🎭"
+        },
+        {
+          "title": "Onde o erro mais aparece",
+          "text": "Desconfie de nomes de pessoas, números, datas, preços, artigos de lei, citações de estudos e links. É justamente aí que ela erra mais, porque são detalhes que ela tenta reconstruir de memória.",
+          "illustration": "🔍"
+        },
+        {
+          "title": "Ela parou de aprender em alguma data",
+          "text": "A IA estudou textos até certo dia e não sabe o que veio depois, a não ser que a ferramenta busque na internet na hora. Preço, horário, lei nova e notícia de ontem: confira sempre na fonte.",
+          "illustration": "📅"
+        }
+      ]
+    },
+    {
+      "id": "c4-fato-ou-texto",
+      "type": "choose-prompt",
+      "situation": "Você precisa levar sua vizinha para tomar uma vacina e quer saber o horário de atendimento do posto de saúde do bairro. Você abriu a conversa com a IA. O que você escreve?",
+      "options": [
+        {
+          "text": "Que horas abre o posto de saúde do Jardim América?",
+          "correct": false,
+          "feedback": "Horário de posto muda e não está na cabeça da IA. Ela pode responder um horário com toda a segurança e estar errada. Isso se confere na fonte."
+        },
+        {
+          "text": "Me ajude a escrever uma mensagem curta e educada perguntando ao posto de saúde do bairro qual é o horário de atendimento.",
+          "correct": true,
+          "feedback": "Aqui você usa a IA para o que ela faz bem, escrever o texto, e vai buscar o fato em quem tem a informação certa: o próprio posto."
+        },
+        {
+          "text": "Confirme se o posto de saúde do Jardim América abre aos sábados.",
+          "correct": false,
+          "feedback": "Pedir confirmação não torna a resposta verdadeira: a IA não tem como checar isso. Quem confirma horário é o posto, a prefeitura ou um telefonema."
+        },
+        {
+          "text": "Diga qual é o horário mais provável de funcionamento de um posto de saúde de bairro.",
+          "correct": false,
+          "feedback": "Você pediu um chute e vai receber um chute bem escrito. Para um horário que você precisa usar hoje, procure a fonte oficial."
+        }
+      ],
+      "resultPreview": "Bom dia! Gostaria de saber qual é o horário de atendimento do posto nesta semana e se é preciso agendar para tomar vacina. Obrigada desde já!"
+    },
+    {
+      "id": "c4-pedir-fonte",
+      "type": "choose-prompt",
+      "situation": "Você comprou um liquidificador e ele parou de funcionar em duas semanas. Antes de ligar para a loja, você quer entender o seu direito de troca. O que você escreve para a IA?",
+      "options": [
+        {
+          "text": "quantos dias eu tenho pra trocar?",
+          "correct": false,
+          "feedback": "Trocar o quê, comprado quando, com qual problema? E você ainda vai receber um número solto, sem nenhuma pista de onde conferir."
+        },
+        {
+          "text": "Explique em linguagem simples o que o Código de Defesa do Consumidor diz sobre prazo de troca de produto com defeito. Se você não tiver certeza de algum número, diga isso. Depois me indique onde eu confirmo.",
+          "correct": true,
+          "feedback": "Você deu a tarefa, o formato (linguagem simples) e fez as duas perguntas que protegem você: avise se não tiver certeza e diga onde confirmar."
+        },
+        {
+          "text": "Cite o artigo exato do Código de Defesa do Consumidor sobre troca, com o número e o texto da lei.",
+          "correct": false,
+          "feedback": "Pedir número de artigo e texto de lei é convite para invenção: é o tipo de detalhe que a IA reconstrói errado. Peça a explicação e confira na fonte."
+        },
+        {
+          "text": "Me diga o prazo de troca e garanta que a informação está cem por cento correta.",
+          "correct": false,
+          "feedback": "A IA vai dizer que está correta, porque foi isso que você pediu. Pedir garantia não checa nada. Peça que ela aponte as dúvidas e onde confirmar."
+        }
+      ],
+      "resultPreview": "Pelo Código de Defesa do Consumidor, produtos duráveis, como um liquidificador, têm 90 dias para você reclamar de um defeito, contados a partir do momento em que o problema aparece. Depois da reclamação, a loja ou o fabricante costuma ter até 30 dias para consertar; se não consertar, você pode pedir a troca, o dinheiro de volta ou um abatimento no preço. Não tenho certeza sobre prazos especiais que a própria loja possa oferecer. Confirme no site oficial do Procon do seu estado ou no texto da lei no portal do Planalto."
+    },
+    {
+      "id": "c4-montar-verificavel",
+      "type": "build-prompt",
+      "situation": "Sua mãe tem 72 anos e ficou em dúvida se deve tomar a vacina da gripe este ano. Você quer uma explicação simples para ler com ela, e que deixe claro o que precisa ser falado com o médico. Monte o pedido.",
+      "required": ["context", "task", "format"],
+      "blocks": [
+        {
+          "id": "c4-b1-ctx",
+          "category": "context",
+          "text": "Minha mãe tem 72 anos e quer entender a vacina da gripe."
+        },
+        {
+          "id": "c4-b1-task",
+          "category": "task",
+          "text": "Explique para que serve a vacina da gripe e quem deve tomar."
+        },
+        {
+          "id": "c4-b1-format",
+          "category": "format",
+          "text": "Responda em 5 tópicos curtos e diga no final o que eu devo confirmar com o médico."
+        },
+        {
+          "id": "c4-b1-tone",
+          "category": "tone",
+          "text": "Use palavras simples, sem termos médicos."
+        },
+        {
+          "id": "c4-b1-noise-dose",
+          "category": "noise",
+          "text": "Diga a dose exata que ela deve tomar.",
+          "feedback": "Dose é decisão médica, e é onde a IA erra com mais confiança. Use a IA para entender o assunto e deixe a dose com o médico ou o posto de saúde."
+        },
+        {
+          "id": "c4-b1-noise-dados",
+          "category": "noise",
+          "text": "Ela toma losartana de 50mg e o CPF dela é 000.000.000-00.",
+          "feedback": "Remédio de uso contínuo e CPF são dados sensíveis de outra pessoa e não mudam a explicação. Nunca cole documento ou histórico de saúde numa conversa com a IA."
+        }
+      ],
+      "successFeedback": "Pedido bem montado: contexto, tarefa e formato. E o melhor é que o formato já pede a lista do que confirmar com quem entende do assunto.",
+      "resultPreview": "1. A vacina da gripe prepara o corpo para reconhecer o vírus da gripe e reagir mais rápido. 2. Ela não impede toda gripe, mas reduz muito a chance de um caso grave, com internação. 3. Como o vírus muda todo ano, a vacina é atualizada e tomada uma vez por ano. 4. Pessoas com mais de 60 anos estão entre os grupos que mais se beneficiam, por isso ela é oferecida de graça no posto. 5. Os efeitos mais comuns são dor no braço e um mal-estar leve por um ou dois dias. Para confirmar com o médico: se algum remédio que ela usa interfere, se alguma alergia impede a vacina e qual é a melhor época para tomar este ano."
+    },
+    {
+      "id": "c4-sinais-de-alerta",
+      "type": "choose-prompt",
+      "situation": "Você pediu à IA informações sobre sono e ela respondeu citando \"um estudo da USP de 2021, do professor Ricardo Alves\", com direito a porcentagem. Você pensou em mandar isso no grupo da família. O que você escreve antes?",
+      "options": [
+        {
+          "text": "Me dê o link ou a referência completa desse estudo. Se você não conseguir, diga que não tem certeza de que ele existe.",
+          "correct": true,
+          "feedback": "Esse é o pedido que desarma a invenção: ou vem uma referência que você confere, ou vem a admissão de que não há certeza. Nome, ano e porcentagem são o ponto fraco da IA."
+        },
+        {
+          "text": "Resuma os principais resultados desse estudo em 3 tópicos.",
+          "correct": false,
+          "feedback": "Você pediu mais detalhes de algo que talvez não exista, e cada detalhe novo pode ser inventado também. Primeiro confirme que o estudo é real."
+        },
+        {
+          "text": "Me dê mais três estudos parecidos sobre sono.",
+          "correct": false,
+          "feedback": "Em vez de uma citação duvidosa, você fica com quatro. Antes de aumentar a lista, peça a referência da primeira."
+        },
+        {
+          "text": "Escreva uma mensagem para o grupo da família contando o que esse estudo descobriu.",
+          "correct": false,
+          "feedback": "Aqui você repassa para outras pessoas uma informação que ainda não conferiu. Verifique antes de compartilhar, sempre."
+        }
+      ],
+      "resultPreview": "Não consigo te dar um link confiável para esse estudo e, sendo honesta, não tenho certeza de que ele exista nesses termos. Posso ter juntado um nome, uma instituição e um ano que não vão juntos. Se quiser confirmar, procure no Google Acadêmico ou no repositório da própria universidade. Enquanto isso, prefiro te explicar o que é consenso sobre sono, sem citar um estudo específico."
+    },
+    {
+      "id": "c4-quando-confiar",
+      "type": "choose-prompt",
+      "situation": "Você escreveu um aviso para o mural do prédio sobre a limpeza da caixa d'água e já colou o texto na conversa. Dos pedidos abaixo, só um dá uma resposta em que você pode confiar sem sair conferindo em outro lugar. Qual é?",
+      "options": [
+        {
+          "text": "Qual é o CEP da Rua das Acácias, em Campinas?",
+          "correct": false,
+          "feedback": "CEP é um dado exato que a IA tenta reconstruir de memória, e ela erra um número sem piscar. Isso se consulta no site dos Correios."
+        },
+        {
+          "text": "Reescreva o aviso que eu colei para ficar mais claro, mantendo a data e o horário que eu escrevi.",
+          "correct": true,
+          "feedback": "A informação é sua: a data e o horário vieram de você. A IA só está trabalhando o texto, e é nisso que ela é boa. Você lê e vê na hora se ficou bom."
+        },
+        {
+          "text": "Quantos habitantes tem a minha cidade hoje?",
+          "correct": false,
+          "feedback": "Número de população muda e depende de censo recente, que pode ser posterior ao que a IA aprendeu. Procure no site do IBGE."
+        },
+        {
+          "text": "Qual remédio eu tomo para essa dor de cabeça que não passa há três dias?",
+          "correct": false,
+          "feedback": "Remédio é decisão de saúde e não se resolve numa conversa com a IA. Dor que não passa há três dias é assunto para médico ou farmacêutico."
+        }
+      ],
+      "resultPreview": "AVISO AOS MORADORES. A limpeza da caixa d'água será feita na terça-feira, dia 12, das 8h às 12h. Durante esse período não haverá água nos apartamentos. Recomendamos guardar água para beber e cozinhar na noite anterior. Agradecemos a compreensão de todos."
+    }
+  ]
+}
