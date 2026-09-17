@@ -60,7 +60,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-serif);
-  font-weight: 500; /* display never goes bold */
+  font-weight: 500;
   color: var(--ink);
   line-height: 1.12;
   margin: 0 0 var(--space-3);
@@ -69,6 +69,17 @@ h3 {
 h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
 h2 { font-size: 1.75rem; letter-spacing: -0.3px; }
 h3 { font-size: 1.4rem; letter-spacing: -0.3px; }
+
+/* On wide screens Cormorant Garamond reads too thin at 500, so display type goes bold.
+   This departs from the DESIGN.md rule on purpose: its original face (Copernicus) is
+   much sturdier than this open-source substitute. */
+@media (min-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+}
 
 p { margin: 0 0 var(--space-3); }
 

@@ -196,7 +196,9 @@ continua neutro entre ferramentas.
 
 **Tipografia (Google Fonts):**
 - Cormorant Garamond 500 (substituta aberta de Copernicus) só em títulos h1 a h3, com
-  espaçamento negativo (-0,3 a -0,5px). Display nunca em negrito.
+  espaçamento negativo (-0,3 a -0,5px). Peso 500 no celular e 700 a partir de 768px de
+  largura: a Cormorant é bem mais fina que a Copernicus original e fica fraca em tela grande.
+  É um desvio deliberado da regra "display nunca em negrito" do DESIGN.md.
 - Inter (substituta de StyreneB) em todo o resto: corpo 17px/1,55, rótulos 12px/500 em
   caixa alta com 1,5px de espaçamento, botões.
 - Pilha monoespaçada do sistema no rótulo do cartão de resposta da IA. Sem webfont extra.
