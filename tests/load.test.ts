@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { loadChapters } from '../src/lib/content/load';
+import index from '../content/capitulos.json';
 
 describe('loadChapters', () => {
   it('returns one entry per id in content/capitulos.json, in order', () => {
     const loaded = loadChapters();
-    expect(loaded.length).toBe(1);
-    expect(loaded[0]?.id).toBe('01-o-que-e-ia');
+    expect(loaded.map((l) => l.id)).toEqual(index.order);
   });
 
   it('every entry has chapter !== null and errors equal to []', () => {
