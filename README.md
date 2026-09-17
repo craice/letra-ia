@@ -1,4 +1,8 @@
-# Letra IA
+# letra-ia
+
+![letra-ia: Entenda a IA. Use com confiança.](public/og.png)
+
+Feito por **[Rafael Craice](https://craice.me)**, com o [Claude Code](https://claude.com/claude-code).
 
 Um jogo curto, aberto e gratuito para quem quer entender e usar bem as IAs de conversa
 (Claude, ChatGPT, Gemini e parecidas), sem precisar saber nada de tecnologia.
@@ -36,6 +40,30 @@ pasta `dist/`), `npm run check` (checagem de tipos).
 
 A contribuição mais valiosa é conteúdo: novas fases, melhores exemplos, correções de texto.
 Veja [CONTRIBUTING.md](CONTRIBUTING.md). Não precisa saber programar para propor uma fase.
+
+## Do que ele é feito
+
+| Parte | O que usamos | Licença |
+|---|---|---|
+| Código | [Svelte 5](https://svelte.dev), [Vite](https://vite.dev), TypeScript, [Vitest](https://vitest.dev) | MIT |
+| Títulos | [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond), via Google Fonts | SIL Open Font 1.1 |
+| Texto | [Inter](https://fonts.google.com/specimen/Inter), via Google Fonts | SIL Open Font 1.1 |
+| Ícones | [Pixelarticons](https://pixelarticons.com), de Gerrit Halfmann. Só os usados, em `src/assets/icons/` | MIT |
+| Visual | Tokens do [DESIGN.md](https://www.designmd.co/d/claude) publicado pelo DesignMD, uma leitura de terceiros do site do Claude | referência |
+| Mascote | A Letra, um "a" em pixel-art desenhado para o jogo (`src/ui/Mascot.svelte`) | MIT |
+| Hospedagem | GitHub Pages, com deploy por GitHub Actions | |
+
+A única dependência em produção é o Svelte. Fontes vêm do Google Fonts; o resto é embutido no build.
+
+A imagem de compartilhamento é gerada a partir de `docs/og/og.html`: abra em 1200x630 e
+capture a tela para `public/og.png`.
+
+## Feito com Claude Code
+
+O letra-ia foi construído de ponta a ponta com o [Claude Code](https://claude.com/claude-code):
+o desenho do jogo, a especificação, o plano, o código, os textos das 36 fases, as revisões e
+os testes de acessibilidade. A especificação e o plano estão em `docs/superpowers/`, para
+quem quiser ver como o processo aconteceu.
 
 ## Licenças
 

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Start from './screens/Start.svelte';
+  import About from './screens/About.svelte';
   import Map from './screens/Map.svelte';
   import Phase from './screens/Phase.svelte';
   import Certificate from './screens/Certificate.svelte';
@@ -11,7 +12,8 @@
     | { name: 'start' }
     | { name: 'map' }
     | { name: 'phase'; phaseId: string }
-    | { name: 'certificate' };
+    | { name: 'certificate' }
+    | { name: 'about' };
 
   const loaded = loadChapters();
   const chapters = validChapters(loaded);
@@ -54,7 +56,9 @@
 
 <main tabindex="-1" bind:this={mainEl}>
   {#if screen.name === 'start'}
-    <Start {hasProgress} onStart={start} onReset={reset} />
+    <Start {hasProgress} onStart={start} onReset={reset} onAbout={() => (screen = { name: 'about' })} />
+  {:else if screen.name === 'about'}
+    <About onHome={() => (screen = { name: 'start' })} />
   {:else if screen.name === 'map'}
     <Map
       {loaded}

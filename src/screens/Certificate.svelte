@@ -28,8 +28,8 @@
   async function share(): Promise<void> {
     try {
       await navigator.share({
-        title: 'Letra IA',
-        text: `Concluí a jornada Letra IA com ${stars} de ${maxStars} estrelas. Um jogo aberto para entender e usar bem a IA.`,
+        title: 'letra-ia',
+        text: `Concluí a jornada do letra-ia com ${stars} de ${maxStars} estrelas. Um jogo aberto para entender e usar bem a IA.`,
         url: window.location.href,
       });
     } catch {
@@ -49,7 +49,7 @@
     <h1>Jornada concluída</h1>
     <p class="lead">
       {#if progress.playerName}<strong>{progress.playerName}</strong>{:else}Você{/if}
-      completou os {chapters.length} capítulos do Letra IA e sabe pedir bem, desconfiar na hora certa e usar a IA no dia a dia e no trabalho.
+      completou os {chapters.length} capítulos do letra-ia e sabe pedir bem, desconfiar na hora certa e usar a IA no dia a dia e no trabalho.
     </p>
     <p class="meta sans">★ {stars} de {maxStars} estrelas · {date}</p>
 

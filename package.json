@@ -4,8 +4,19 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Jogo aberto de letramento em IA para pessoas leigas.",
+  "author": {
+    "name": "Rafael Craice",
+    "url": "https://craice.me"
+  },
+  "homepage": "https://craice.github.io/letra-ia/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craice/letra-ia.git"
+  },
   "license": "MIT",
-  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
