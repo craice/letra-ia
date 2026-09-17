@@ -6,6 +6,7 @@
   import { challengeNumber, isChapterUnlocked, isPhaseUnlocked, nextPhaseId } from '../lib/progress/unlock';
   import Stars from '../ui/Stars.svelte';
   import Button from '../ui/Button.svelte';
+  import Icon from '../ui/Icon.svelte';
 
   let {
     loaded, chapters, progress, onOpenPhase, onHome, onCertificate,
@@ -43,7 +44,7 @@
         {@const unlocked = isChapterUnlocked(chapters, progress, chapter.id)}
         <li class="chapter card" class:locked={!unlocked}>
           <div class="head">
-            <span class="num sans" class:done={chapterDone(chapter) === chapter.phases.length} aria-hidden="true">{chapter.icon}</span>
+            <span class="num sans" class:done={chapterDone(chapter) === chapter.phases.length} aria-hidden="true"><Icon name={chapter.icon} size={24} /></span>
             <span class="visually-hidden">Capítulo {i + 1}</span>
             <div>
               <h2>{chapter.title}</h2>
@@ -103,8 +104,8 @@
   .chapters { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: calc(var(--touch) + var(--space-5)); }
   .chapter.locked { opacity: 0.55; }
   .head { display: flex; gap: var(--space-3); align-items: center; }
-  .head h2 { font-size: 1.15rem; margin: 0; }
-  .num { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); font-size: 0.9rem; flex: none; }
+  .head h2 { font-size: 1.4rem; margin: 0 0 2px; }
+  .num { width: 44px; height: 44px; color: var(--ink); border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); font-size: 0.9rem; flex: none; }
   .num.done { background: var(--ink); color: var(--on-dark); border-color: var(--ink); }
   .phases { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: flex; flex-direction: column; gap: var(--space-1); }
   .phase { display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: var(--touch); background: none; border: 0; border-radius: var(--radius); padding: var(--space-2); text-align: left; color: var(--ink); }

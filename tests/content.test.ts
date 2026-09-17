@@ -29,6 +29,25 @@ describe('content/', () => {
     });
   }
 
+  it('every chapter icon and card illustration names an SVG in src/assets/icons', () => {
+    const available = new Set(
+      readdirSync(join(__dirname, '..', 'src', 'assets', 'icons'))
+        .filter((f) => f.endsWith('.svg'))
+        .map((f) => f.replace(/\.svg$/, '')),
+    );
+    for (const file of files) {
+      const chapter = readJson(join(chaptersDir, file)) as Chapter;
+      expect(available.has(chapter.icon), `${file}: icon "${chapter.icon}"`).toBe(true);
+      for (const phase of chapter.phases) {
+        if (phase.type !== 'explanation') continue;
+        for (const card of phase.cards) {
+          if (card.illustration === undefined) continue;
+          expect(available.has(card.illustration), `${file} ${phase.id}: illustration "${card.illustration}"`).toBe(true);
+        }
+      }
+    }
+  });
+
   it('phase ids are unique across all chapters', () => {
     const chapters = files.map((f) => readJson(join(chaptersDir, f)) as Chapter);
     expect(validateContent(chapters)).toEqual([]);

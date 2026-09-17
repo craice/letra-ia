@@ -1,7 +1,7 @@
 {
   "id": "04-desconfiar",
   "title": "Desconfiar na hora certa",
-  "icon": "🧭",
+  "icon": "compass",
   "phases": [
     {
       "id": "c4-alucinacao",
@@ -11,17 +11,17 @@
         {
           "title": "Ela pode inventar com toda a calma",
           "text": "Chamam isso de alucinação: a IA escreve uma resposta bonita, bem redigida e falsa. Ela não mente de propósito, ela completa o texto do jeito que parece certo. Segurança na voz não é sinal de acerto.",
-          "illustration": "🎭"
+          "illustration": "wand"
         },
         {
           "title": "Onde o erro mais aparece",
           "text": "Desconfie de nomes de pessoas, números, datas, preços, artigos de lei, citações de estudos e links. É justamente aí que ela erra mais, porque são detalhes que ela tenta reconstruir de memória.",
-          "illustration": "🔍"
+          "illustration": "search"
         },
         {
           "title": "Ela parou de aprender em alguma data",
           "text": "A IA estudou textos até certo dia e não sabe o que veio depois, a não ser que a ferramenta busque na internet na hora. Preço, horário, lei nova e notícia de ontem: confira sempre na fonte.",
-          "illustration": "📅"
+          "illustration": "calendar"
         }
       ]
     },

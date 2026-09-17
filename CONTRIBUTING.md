@@ -8,7 +8,8 @@ testes automáticos avisam se faltar algo.
 
 ### Tipos de fase
 
-**Explicação** (`explanation`): 1 a 3 cartões com título, texto e um emoji opcional.
+**Explicação** (`explanation`): 1 a 3 cartões com título, texto e uma ilustração opcional
+(`illustration`), que é o nome de um ícone.
 
 **Escolher o pedido** (`choose-prompt`): uma situação, 3 ou 4 pedidos possíveis, exatamente
 um `"correct": true`. Todos precisam de `feedback`. `resultPreview` é o que a IA
@@ -17,6 +18,14 @@ responderia ao pedido certo.
 **Montar o pedido** (`build-prompt`): uma situação, uma lista de categorias obrigatórias
 (`required`) e peças (`blocks`). Categorias: `context`, `task`, `format`, `tone`, `example`
 e `noise` (armadilha). Toda peça `noise` precisa de `feedback` explicando por que não usar.
+
+### Ícones
+
+O `icon` de cada capítulo e a `illustration` dos cartões são nomes de arquivos em
+`src/assets/icons/` (sem o `.svg`), por exemplo `"compass"` ou `"pencil"`. Os ícones vêm
+da [Pixelarticons](https://pixelarticons.com) (licença MIT). Para usar um que ainda não está
+na pasta, copie o SVG do projeto deles para lá. O teste de conteúdo recusa nomes que não
+existem. Não use emoji: em alguns sistemas eles aparecem como quadrados.
 
 ### Regras de escrita
 

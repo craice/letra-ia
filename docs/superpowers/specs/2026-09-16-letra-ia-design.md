@@ -85,7 +85,7 @@ Capítulo: `{ id, title, icon, phases: Phase[] }`. Cada fase tem `id` único glo
   "id": "ia-nao-e-pessoa",
   "type": "explanation",
   "title": "A IA não é uma pessoa",
-  "cards": [{ "title": "...", "text": "...", "illustration": "🤖" }]
+  "cards": [{ "title": "...", "text": "...", "illustration": "robot-face" }]
 }
 ```
 
@@ -233,6 +233,12 @@ botões. Sem sombra. O ritmo creme para escuro aparece no cartão de resposta da
 quando feliz, com `steps()`; tudo desligado por `prefers-reduced-motion`. Personagem
 original, no espírito pixel-art do mascote do Claude Code, sem copiá-lo. O favicon usa o
 mesmo desenho.
+
+**Ícones:** Pixelarticons (MIT), em pixel-art como o mascote. Só os SVGs usados são
+copiados para `src/assets/icons/` e embutidos no build; não há pacote de ícones como
+dependência. O conteúdo referencia ícones pelo nome do arquivo (`icon` do capítulo,
+`illustration` do cartão) e o teste de conteúdo recusa nomes inexistentes. Emoji não é
+mais usado, porque vira quadrado em sistemas sem fonte de emoji.
 
 Tema escuro continua fora de escopo.
 

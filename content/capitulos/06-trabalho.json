@@ -1,7 +1,7 @@
 {
   "id": "06-trabalho",
   "title": "Trabalho",
-  "icon": "💼",
+  "icon": "briefcase",
   "phases": [
     {
       "id": "c6-no-trabalho",
@@ -11,17 +11,17 @@
         {
           "title": "Onde ela ajuda de verdade",
           "text": "Rascunho de e-mail, resumo de documento longo, organizar ideias soltas, entender um assunto novo, preparar os pontos de uma reunião. Ela tira você da página em branco, que costuma ser a parte mais lenta.",
-          "illustration": "🧰"
+          "illustration": "tools"
         },
         {
           "title": "Quem assina é você",
           "text": "O que sai da IA é rascunho, não versão final. Leia inteiro, confira nomes, números e prazos, e ajuste para ficar com a sua voz. Se der problema depois, a responsabilidade é de quem enviou.",
-          "illustration": "✍️"
+          "illustration": "pen-square"
         },
         {
           "title": "Combine com a empresa",
           "text": "Muitas empresas já têm regra sobre usar IA: o que pode ser colado, quais ferramentas são liberadas. Pergunte antes ao seu gestor ou ao pessoal de tecnologia. É melhor perguntar do que descobrir errado.",
-          "illustration": "📋"
+          "illustration": "clipboard-note"
         }
       ]
     },

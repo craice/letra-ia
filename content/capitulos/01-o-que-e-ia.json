@@ -1,7 +1,7 @@
 {
   "id": "01-o-que-e-ia",
   "title": "O que é uma IA de conversa",
-  "icon": "💬",
+  "icon": "message-text",
   "phases": [
     {
       "id": "c1-o-que-e",
@@ -11,17 +11,17 @@
         {
           "title": "Não é mágica, é previsão",
           "text": "Claude, ChatGPT e Gemini são programas que leram uma quantidade enorme de textos e aprenderam a prever qual palavra costuma vir depois da outra. Quando você escreve algo, eles continuam o texto da forma mais provável.",
-          "illustration": "✍️"
+          "illustration": "pencil"
         },
         {
           "title": "Não é uma pessoa",
           "text": "Parece uma conversa porque o programa foi treinado para responder como uma pessoa responderia. Mas ele não tem opinião, não se lembra de você entre conversas e não sabe o que aconteceu hoje, a menos que você conte.",
-          "illustration": "🙂"
+          "illustration": "robot-face"
         },
         {
           "title": "Não é um buscador",
           "text": "O Google procura páginas que já existem. A IA de conversa cria um texto novo na hora. Por isso ela é ótima para escrever, resumir e explicar, e menos confiável para dar um telefone, um endereço ou uma data exata.",
-          "illustration": "🔍"
+          "illustration": "search"
         }
       ]
     },
@@ -33,12 +33,12 @@
         {
           "title": "O texto mais provável nem sempre é o verdadeiro",
           "text": "Como a IA monta a resposta pela forma como as frases costumam ser, ela pode escrever algo que soa perfeito e está errado. Isso tem nome: alucinação. Não é mentira nem defeito raro, é parte de como ela funciona.",
-          "illustration": "🎭"
+          "illustration": "sparkles"
         },
         {
           "title": "Ela não sabe que não sabe",
           "text": "Uma pessoa hesita quando não tem certeza. A IA quase sempre responde no mesmo tom seguro, saiba ou não. Cabe a você desconfiar quando o assunto é fato, número, nome ou data. Vamos treinar isso num capítulo só sobre isso.",
-          "illustration": "🧭"
+          "illustration": "circle-question"
         }
       ]
     },

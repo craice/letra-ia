@@ -1,7 +1,7 @@
 {
   "id": "05-cuidados",
   "title": "Cuidados",
-  "icon": "🔒",
+  "icon": "lock",
   "phases": [
     {
       "id": "c5-o-que-nao-colar",
@@ -11,17 +11,17 @@
         {
           "title": "Seus dados pessoais ficam fora",
           "text": "CPF, RG, senha, número de cartão, endereço, telefone. E vale também para os dados das outras pessoas: nome completo, documento e informação de saúde de quem confiou isso a você.",
-          "illustration": "🪪"
+          "illustration": "membercard"
         },
         {
           "title": "O sigilo do trabalho também",
           "text": "Contrato, dados de cliente, planilha de salários, projeto que ainda não saiu. Antes de colar qualquer coisa do trabalho, veja se a sua empresa já tem uma regra sobre isso e pergunte.",
-          "illustration": "🤐"
+          "illustration": "eye-off"
         },
         {
           "title": "Troque o dado por um marcador",
           "text": "Quase sempre dá para pedir a mesma coisa sem o dado real. Escreva \"[NOME]\", \"[VALOR]\" ou \"[DATA]\" no lugar, ou descreva a situação em vez de colar o documento. A resposta sai igual de boa.",
-          "illustration": "🏷️"
+          "illustration": "label"
         }
       ]
     },
@@ -70,12 +70,12 @@
         {
           "title": "Mesma ideia, jeitos diferentes",
           "text": "Claude, ChatGPT e Gemini: mesma ideia, jeitos e limites diferentes. Algumas dessas ferramentas buscam na internet, outras não. Algumas lembram das conversas antigas, outras começam do zero toda vez. Vale experimentar mais de uma.",
-          "illustration": "🧩"
+          "illustration": "shapes"
         },
         {
           "title": "Versão gratuita e versão paga",
           "text": "A versão gratuita costuma ter limite de uso por dia e usar uma versão mais simples do programa. A paga responde melhor em tarefas longas. Para o dia a dia que você viu até aqui, a gratuita já resolve muito bem.",
-          "illustration": "💳"
+          "illustration": "credit-card"
         }
       ]
     },

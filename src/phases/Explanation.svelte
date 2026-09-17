@@ -2,6 +2,7 @@
   import type { ExplanationPhase } from '../lib/content/types';
   import Button from '../ui/Button.svelte';
   import Speech from '../ui/Speech.svelte';
+  import Icon from '../ui/Icon.svelte';
 
   let { phase, onComplete }: { phase: ExplanationPhase; onComplete: (attempts: number) => void } = $props();
 
@@ -19,7 +20,7 @@
 
 <article class="card lesson" aria-live="polite">
   {#if card.illustration}
-    <div class="illo" aria-hidden="true">{card.illustration}</div>
+    <div class="illo"><Icon name={card.illustration} size={48} /></div>
   {/if}
   {#if card.title}<h2>{card.title}</h2>{/if}
   <p>{card.text}</p>
@@ -36,7 +37,7 @@
 
 <style>
   .lesson { margin-bottom: var(--space-4); }
-  .illo { font-size: 2.2rem; margin-bottom: var(--space-2); }
+  .illo { color: var(--accent-strong); margin-bottom: var(--space-3); }
   .lesson h2 { font-size: 1.6rem; }
   .lesson p { margin: 0; }
   .nav { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); align-items: center; }

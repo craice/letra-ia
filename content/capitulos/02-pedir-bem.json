@@ -1,7 +1,7 @@
 {
   "id": "02-pedir-bem",
   "title": "Pedir bem",
-  "icon": "🎯",
+  "icon": "target",
   "phases": [
     {
       "id": "c2-tres-ingredientes",
@@ -11,17 +11,17 @@
         {
           "title": "Contexto: conte a sua situação",
           "text": "A IA não sabe nada sobre você. Quem é você, para quem é o texto, o que você já tem em casa, quanto você pode gastar. Duas frases de contexto mudam tudo na resposta.",
-          "illustration": "🗺️"
+          "illustration": "map"
         },
         {
           "title": "Tarefa: peça com um verbo",
           "text": "Diga o que você quer que ela faça: escreva, resuma, liste, explique, compare, corrija. Um verbo claro evita que a IA fique enrolando ou responda outra coisa.",
-          "illustration": "👉"
+          "illustration": "pointer"
         },
         {
           "title": "Formato: diga como quer receber",
           "text": "Lista ou texto corrido? Três tópicos ou uma página? Tom sério ou brincalhão? Se você não disser, a IA escolhe por você e quase sempre escreve demais.",
-          "illustration": "📐"
+          "illustration": "layout"
         }
       ]
     },

@@ -1,7 +1,7 @@
 {
   "id": "03-conversar",
   "title": "Conversar, não só perguntar",
-  "icon": "🔁",
+  "icon": "repeat",
   "phases": [
     {
       "id": "c3-ida-e-volta",
@@ -11,17 +11,17 @@
         {
           "title": "A primeira resposta é um rascunho",
           "text": "Quase ninguém acerta de primeira, nem você nem a IA. Trate o que ela escreveu como um rascunho: serve para você ver o que gostou e o que quer diferente.",
-          "illustration": "📝"
+          "illustration": "sticky-note-text"
         },
         {
           "title": "Você pode pedir de novo",
           "text": "Não precisa aceitar o que veio. Basta escrever \"mais curto\", \"menos formal\", \"troque o segundo parágrafo\" ou \"me dê outras 3 opções\". A IA refaz sem reclamar.",
-          "illustration": "🔁"
+          "illustration": "repeat"
         },
         {
           "title": "Corrija o rumo, não recomece",
           "text": "Se você começar tudo de novo, perde a parte boa. Diga o que não funcionou e o que quer no lugar. É mais rápido e a resposta melhora a cada volta.",
-          "illustration": "🧭"
+          "illustration": "directions"
         }
       ]
     },
