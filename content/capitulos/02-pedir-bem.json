@@ -89,7 +89,7 @@
         {
           "text": "Resume o comunicado da escola.",
           "correct": false,
-          "feedback": "A IA só lê o que está escrito na conversa: ela não abre o e-mail nem o aplicativo da escola. Cole sempre o texto junto com o pedido."
+          "feedback": "A IA já tem o texto, mas \"resume\" sozinho não diz tamanho nem foco. Peça um número de tópicos e diga o que importa: as datas e o que você precisa fazer."
         },
         {
           "text": "Explica isso.",
