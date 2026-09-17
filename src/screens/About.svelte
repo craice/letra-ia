@@ -53,6 +53,11 @@
       <a href="https://github.com/craice/letra-ia" rel="noopener">GitHub</a>.
     </p>
     <p class="fine">
+      O site usa o Google Analytics para contar visitas e saber quais fases as pessoas concluem.
+      Não enviamos o nome do certificado nem nada que você escreva. Seu progresso fica só no
+      seu navegador.
+    </p>
+    <p class="fine">
       Projeto independente, sem ligação com Anthropic, OpenAI, Google ou qualquer empresa de IA.
     </p>
   </div>

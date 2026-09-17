@@ -30,6 +30,25 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Google Analytics 4. Loads only on the published site, so local development and
+         forks on other domains never send data. No ad signals, no personal data. -->
+    <script>
+      (function () {
+        if (location.hostname !== 'craice.github.io') return;
+        var id = 'G-6EZVDCT9KG';
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', id, {
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>

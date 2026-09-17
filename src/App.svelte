@@ -1,6 +1,7 @@
 <script lang="ts">
   import Start from './screens/Start.svelte';
   import About from './screens/About.svelte';
+  import { track, trackScreen } from './lib/analytics';
   import Map from './screens/Map.svelte';
   import Phase from './screens/Phase.svelte';
   import Certificate from './screens/Certificate.svelte';
@@ -22,7 +23,7 @@
   let mainEl: HTMLElement | undefined;
 
   $effect(() => {
-    screen;
+    trackScreen(screen.name, screen.name === 'phase' ? { phase_id: screen.phaseId } : {});
     mainEl?.focus({ preventScroll: false });
   });
 
@@ -43,7 +44,13 @@
 
   function completePhase(phaseId: string, attempts: number): void {
     progressStore.complete(phaseId, attempts);
+    track('phase_complete', {
+      phase_id: phaseId,
+      attempts,
+      stars: progressStore.progress.phases[phaseId]?.stars ?? 0,
+    });
     const next = nextPhaseId(chapters, progressStore.progress);
+    if (next === null) track('journey_complete');
     if (next === null) screen = { name: 'certificate' };
     else goToMap();
   }

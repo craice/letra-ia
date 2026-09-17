@@ -52,6 +52,7 @@ Veja [CONTRIBUTING.md](CONTRIBUTING.md). Não precisa saber programar para propo
 | Visual | Tokens do [DESIGN.md](https://www.designmd.co/d/claude) publicado pelo DesignMD, uma leitura de terceiros do site do Claude | referência |
 | Mascote | A Letra, um "a" em pixel-art desenhado para o jogo (`src/ui/Mascot.svelte`) | MIT |
 | Hospedagem | GitHub Pages, com deploy por GitHub Actions | |
+| Métricas | Google Analytics 4, só no site publicado (`craice.github.io`), sem sinais de publicidade e sem dados pessoais. Forks não enviam nada | |
 
 A única dependência em produção é o Svelte. Fontes vêm do Google Fonts; o resto é embutido no build.
 
