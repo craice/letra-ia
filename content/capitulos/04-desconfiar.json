@@ -79,7 +79,7 @@
           "feedback": "A IA vai dizer que está correta, porque foi isso que você pediu. Pedir garantia não checa nada. Peça que ela aponte as dúvidas e onde confirmar."
         }
       ],
-      "resultPreview": "Pelo Código de Defesa do Consumidor, produtos duráveis, como um liquidificador, têm 90 dias para você reclamar de um defeito, contados a partir do momento em que o problema aparece. Depois da reclamação, a loja ou o fabricante costuma ter até 30 dias para consertar; se não consertar, você pode pedir a troca, o dinheiro de volta ou um abatimento no preço. Não tenho certeza sobre prazos especiais que a própria loja possa oferecer. Confirme no site oficial do Procon do seu estado ou no texto da lei no portal do Planalto."
+      "resultPreview": "Pelo Código de Defesa do Consumidor, produtos duráveis, como um liquidificador, têm 90 dias para reclamar, contados da entrega do produto, ou, quando o defeito só aparece depois, de quando ele aparece. Depois da reclamação, a loja ou o fabricante costuma ter até 30 dias para consertar; se não consertar, você pode pedir a troca, o dinheiro de volta ou um abatimento no preço. Não tenho certeza sobre prazos especiais que a própria loja possa oferecer. Confirme no site oficial do Procon do seu estado ou no texto da lei no portal do Planalto."
     },
     {
       "id": "c4-montar-verificavel",

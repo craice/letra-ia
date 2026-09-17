@@ -39,7 +39,7 @@
         {
           "id": "c6-b1-task",
           "category": "task",
-          "text": "Escreva um e-mail curto avisando a minha chefe desse atraso."
+          "text": "Escreva um e-mail curto avisando a minha chefe de que vou chegar atrasada."
         },
         {
           "id": "c6-b1-tone",
@@ -65,7 +65,7 @@
         }
       ],
       "successFeedback": "Contexto, tarefa e tom no lugar certo. Com esses três, um aviso que você levaria dez minutos para pensar sai pronto em segundos.",
-      "resultPreview": "Assunto: Chegada mais tarde amanhã. Bom dia! Tenho uma consulta médica marcada para as 8h e, por isso, devo chegar por volta das 10h. Já deixei encaminhado o que era urgente e retomo o restante assim que chegar. Qualquer coisa, pode me chamar pelo celular. Obrigada pela compreensão!"
+      "resultPreview": "Assunto: Chegada mais tarde amanhã. Bom dia! Tenho uma consulta médica marcada para as 8h e, por isso, devo chegar por volta das 10h. Assim que chegar, retomo as minhas atividades normalmente. Qualquer coisa, pode me chamar pelo celular. Obrigada pela compreensão!"
     },
     {
       "id": "c6-resumir-documento",
@@ -135,7 +135,7 @@
         }
       ],
       "successFeedback": "Contexto, tarefa e formato: com esses três, a fórmula vem pronta para colar e ainda explicada, para você adaptar por conta própria da próxima vez.",
-      "resultPreview": "Fórmula: =SOMASE(A:A;\"João\";C:C). SOMASE soma os valores de uma coluna só quando outra coluna atende a uma condição. A:A é onde ela procura, a coluna com os nomes dos vendedores. \"João\" entre aspas é o que precisa bater, exatamente como está escrito na planilha. C:C é a coluna que ela soma, a dos valores. Dica: se houver \"João \" com espaço no fim em alguma linha, o nome não bate e a venda fica de fora."
+      "resultPreview": "Fórmula: =SOMASE(A:A;\"João\";C:C). SOMASE soma os valores de uma coluna só quando outra coluna atende a uma condição. A:A é onde ela procura, a coluna com os nomes dos vendedores. \"João\" entre aspas é o que precisa bater, exatamente como está escrito na planilha. C:C é a coluna que ela soma, a dos valores. Se a sua planilha estiver em inglês, a função é SUMIF e o separador é vírgula. Dica: se houver \"João \" com espaço no fim em alguma linha, o nome não bate e a venda fica de fora."
     },
     {
       "id": "c6-apresentacao",
@@ -151,7 +151,7 @@
         {
           "id": "c6-b3-task",
           "category": "task",
-          "text": "Monte a estrutura de uma apresentação de 10 minutos sobre esse resultado do trimestre."
+          "text": "Monte a estrutura de uma apresentação de 10 minutos sobre o resultado do trimestre."
         },
         {
           "id": "c6-b3-format",
@@ -166,7 +166,7 @@
         {
           "id": "c6-b3-example",
           "category": "example",
-          "text": "Exemplo do tipo de título que eu gosto: \"Vendas em alta, devoluções em alerta\""
+          "text": "Exemplo do tipo de título que eu gosto: \"Vendas em alta, devoluções em alerta.\""
         },
         {
           "id": "c6-b3-noise-inventar",
@@ -215,7 +215,7 @@
     {
       "id": "c6-revisar-antes-de-enviar",
       "type": "choose-prompt",
-      "situation": "Com a sua ajuda, a IA escreveu uma proposta comercial para um cliente, com valores e prazos. Você já colou a versão final na conversa e o e-mail está pronto para sair. O que você escreve antes de enviar?",
+      "situation": "Com a sua ajuda, a IA escreveu uma proposta comercial para um cliente, com valores e prazos. Você abriu uma conversa nova, colou nela a versão final, e o e-mail já está pronto para sair. O que você escreve antes de enviar?",
       "options": [
         {
           "text": "Deixe o texto mais bonito e mais convincente.",

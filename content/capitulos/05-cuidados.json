@@ -39,7 +39,7 @@
         {
           "id": "c5-b1-task",
           "category": "task",
-          "text": "Escreva uma resposta educada e firme dizendo que a parcela já foi paga e pedindo a confirmação por escrito."
+          "text": "Escreva uma resposta educada e firme dizendo que a parcela do dia 5 já foi paga e pedindo confirmação por escrito."
         },
         {
           "id": "c5-b1-format",
@@ -69,12 +69,12 @@
       "cards": [
         {
           "title": "Mesma ideia, jeitos diferentes",
-          "text": "Existem várias ferramentas de IA e todas funcionam com a mesma ideia, mas cada uma tem o seu jeito e os seus limites. Algumas buscam na internet, outras não. Algumas lembram das conversas antigas, outras começam do zero toda vez.",
+          "text": "Claude, ChatGPT e Gemini: mesma ideia, jeitos e limites diferentes. Algumas dessas ferramentas buscam na internet, outras não. Algumas lembram das conversas antigas, outras começam do zero toda vez. Vale experimentar mais de uma.",
           "illustration": "🧩"
         },
         {
           "title": "Versão gratuita e versão paga",
-          "text": "A versão gratuita costuma ter limite de uso por dia e usar um modelo mais simples. A paga responde melhor em tarefas longas. Para o dia a dia que você viu até aqui, a gratuita já resolve muito bem.",
+          "text": "A versão gratuita costuma ter limite de uso por dia e usar uma versão mais simples do programa. A paga responde melhor em tarefas longas. Para o dia a dia que você viu até aqui, a gratuita já resolve muito bem.",
           "illustration": "💳"
         }
       ]
@@ -92,7 +92,7 @@
         {
           "text": "Escreva um recado para a professora Marina, da turma 3B da Escola Municipal Rui Barbosa, sobre o meu filho João Pedro da Silva.",
           "correct": false,
-          "feedback": "Nome completo da criança, escola e turma juntos identificam ela inteirinha, e nada disso melhora o recado. Além do mais, você nem disse sobre o quê é o recado."
+          "feedback": "Nome completo, escola e turma juntos identificam a criança por inteiro, e nada disso melhora o recado. Além do mais, você nem disse sobre o que é o recado."
         },
         {
           "text": "Meu filho de 8 anos está com dificuldade para acompanhar a leitura na escola. Escreva um recado curto e respeitoso para a professora, pedindo uma conversa para entender como ajudar em casa.",
