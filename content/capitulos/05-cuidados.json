@@ -1,0 +1,167 @@
+{
+  "id": "05-cuidados",
+  "title": "Cuidados",
+  "icon": "🔒",
+  "phases": [
+    {
+      "id": "c5-o-que-nao-colar",
+      "type": "explanation",
+      "title": "O que não entra na conversa",
+      "cards": [
+        {
+          "title": "Seus dados pessoais ficam fora",
+          "text": "CPF, RG, senha, número de cartão, endereço, telefone. E vale também para os dados das outras pessoas: nome completo, documento e informação de saúde de quem confiou isso a você.",
+          "illustration": "🪪"
+        },
+        {
+          "title": "O sigilo do trabalho também",
+          "text": "Contrato, dados de cliente, planilha de salários, projeto que ainda não saiu. Antes de colar qualquer coisa do trabalho, veja se a sua empresa já tem uma regra sobre isso e pergunte.",
+          "illustration": "🤐"
+        },
+        {
+          "title": "Troque o dado por um marcador",
+          "text": "Quase sempre dá para pedir a mesma coisa sem o dado real. Escreva \"[NOME]\", \"[VALOR]\" ou \"[DATA]\" no lugar, ou descreva a situação em vez de colar o documento. A resposta sai igual de boa.",
+          "illustration": "🏷️"
+        }
+      ]
+    },
+    {
+      "id": "c5-anonimizar",
+      "type": "build-prompt",
+      "situation": "Chegou um e-mail cobrando uma parcela que você já pagou. Você quer responder de forma educada, mas firme. Monte o pedido contando só o necessário.",
+      "required": ["context", "task"],
+      "blocks": [
+        {
+          "id": "c5-b1-ctx",
+          "category": "context",
+          "text": "Recebi um e-mail cobrando uma parcela que eu já paguei, no dia 5."
+        },
+        {
+          "id": "c5-b1-task",
+          "category": "task",
+          "text": "Escreva uma resposta educada e firme dizendo que a parcela já foi paga e pedindo a confirmação por escrito."
+        },
+        {
+          "id": "c5-b1-format",
+          "category": "format",
+          "text": "Deixe a resposta curta, de até 5 linhas."
+        },
+        {
+          "id": "c5-b1-noise-cpf",
+          "category": "noise",
+          "text": "Meu CPF é 123.456.789-00 e o número do contrato é 998877.",
+          "feedback": "A IA não precisa desses números para escrever o texto: você preenche na hora de enviar. Documento e número de contrato não entram na conversa."
+        },
+        {
+          "id": "c5-b1-noise-senha",
+          "category": "noise",
+          "text": "Vou colar aqui a senha do aplicativo do banco para você conferir o pagamento.",
+          "feedback": "Senha nunca, em lugar nenhum, para ninguém. A IA não acessa a sua conta e não tem como conferir pagamento. Quem confirma isso é o banco."
+        }
+      ],
+      "successFeedback": "Você deu o contexto e a tarefa, e resolveu a situação sem colar um único dado seu. É assim: conte o que aconteceu, não quem você é.",
+      "resultPreview": "Bom dia. Recebi a cobrança referente a esta parcela, mas ela já foi paga no dia 5, conforme o comprovante que guardei. Peço, por gentileza, que verifiquem o registro no sistema e me confirmem por e-mail a baixa do pagamento. Fico no aguardo do retorno. Atenciosamente."
+    },
+    {
+      "id": "c5-ferramentas-diferentes",
+      "type": "explanation",
+      "title": "Nem toda IA é igual",
+      "cards": [
+        {
+          "title": "Mesma ideia, jeitos diferentes",
+          "text": "Existem várias ferramentas de IA e todas funcionam com a mesma ideia, mas cada uma tem o seu jeito e os seus limites. Algumas buscam na internet, outras não. Algumas lembram das conversas antigas, outras começam do zero toda vez.",
+          "illustration": "🧩"
+        },
+        {
+          "title": "Versão gratuita e versão paga",
+          "text": "A versão gratuita costuma ter limite de uso por dia e usar um modelo mais simples. A paga responde melhor em tarefas longas. Para o dia a dia que você viu até aqui, a gratuita já resolve muito bem.",
+          "illustration": "💳"
+        }
+      ]
+    },
+    {
+      "id": "c5-dados-de-terceiros",
+      "type": "choose-prompt",
+      "situation": "Seu filho de 8 anos está com dificuldade para acompanhar a leitura na escola. Você quer mandar um recado pedindo uma conversa com a professora. O que você escreve para a IA?",
+      "options": [
+        {
+          "text": "Colei aqui o laudo do neurologista do meu filho. Escreva um recado para a professora explicando o diagnóstico dele.",
+          "correct": false,
+          "feedback": "Laudo é informação de saúde de uma criança, o dado mais delicado que existe. Para pedir uma conversa, basta dizer que ele está com dificuldade na leitura."
+        },
+        {
+          "text": "Escreva um recado para a professora Marina, da turma 3B da Escola Municipal Rui Barbosa, sobre o meu filho João Pedro da Silva.",
+          "correct": false,
+          "feedback": "Nome completo da criança, escola e turma juntos identificam ela inteirinha, e nada disso melhora o recado. Além do mais, você nem disse sobre o quê é o recado."
+        },
+        {
+          "text": "Meu filho de 8 anos está com dificuldade para acompanhar a leitura na escola. Escreva um recado curto e respeitoso para a professora, pedindo uma conversa para entender como ajudar em casa.",
+          "correct": true,
+          "feedback": "Tem o contexto que importa (idade e dificuldade), a tarefa e o tom. E nenhum nome, nenhuma escola, nenhum diagnóstico: o recado sai igual de bom."
+        },
+        {
+          "text": "Escreva um recado para a professora do meu filho.",
+          "correct": false,
+          "feedback": "Recado sobre o quê? Sem dizer qual é a dificuldade e o que você quer, a IA vai inventar um assunto. Conte a situação, sem os dados pessoais."
+        }
+      ],
+      "resultPreview": "Olá, professora. Tudo bem? Sou responsável por um aluno de 8 anos da sua turma e tenho notado que ele está com dificuldade para acompanhar a leitura. Gostaria de saber se seria possível conversarmos rapidamente, pessoalmente ou por telefone, para entender como ele está na sala e o que eu posso reforçar em casa. Fico à disposição no horário que for melhor para a senhora. Muito obrigada!"
+    },
+    {
+      "id": "c5-uso-etico",
+      "type": "choose-prompt",
+      "situation": "No curso que você faz, o professor pediu um texto de opinião sobre redes sociais. Você escreveu um rascunho e já colou ele na conversa com a IA. O que você pede?",
+      "options": [
+        {
+          "text": "Escreva o texto por mim e faça de um jeito que não pareça escrito por IA.",
+          "correct": false,
+          "feedback": "Isso não é ajuda, é entregar como seu um texto que não é. E quem perde é você, que ia aprender a defender uma ideia."
+        },
+        {
+          "text": "Aponte no rascunho que eu colei onde o meu argumento está fraco e sugira como eu mesmo posso melhorar cada ponto.",
+          "correct": true,
+          "feedback": "Aqui a IA vira professora particular: ela aponta, você reescreve. O texto continua seu, e você sai do exercício sabendo escrever melhor."
+        },
+        {
+          "text": "Escreva um texto de opinião sobre o uso de redes sociais por adolescentes, com começo, meio e fim.",
+          "correct": false,
+          "feedback": "Você já tem um rascunho seu e está jogando ele fora para entregar a opinião de outro. Peça análise do que você escreveu, não um texto pronto."
+        },
+        {
+          "text": "Reescreva o meu texto de um jeito que não seja pego por detector de IA.",
+          "correct": false,
+          "feedback": "O objetivo aqui é enganar a correção, não melhorar o texto. Além disso, esses detectores erram muito, nos dois sentidos. Melhore o texto de verdade."
+        }
+      ],
+      "resultPreview": "Seu texto tem uma boa ideia central, mas o segundo parágrafo afirma que as redes \"causam ansiedade\" sem nenhum apoio: tente trocar por algo que você mesmo observou ou por uma fonte que você confira. No terceiro parágrafo você muda de assunto no meio, de tempo de tela para privacidade; escolha um dos dois e desenvolva. Falta ainda responder a quem discorda de você, nem que seja em duas frases, porque é isso que dá força a um texto de opinião. A conclusão repete a introdução quase igual: experimente terminar com o que você acha que deveria mudar."
+    },
+    {
+      "id": "c5-confirmar-antes-de-agir",
+      "type": "choose-prompt",
+      "situation": "Seu filho de 6 anos está com dor de garganta. Você perguntou à IA o que dá para fazer em casa e ela listou mel, chá morno e gargarejo com água e sal. O que você escreve antes de sair fazendo?",
+      "options": [
+        {
+          "text": "Me dê a receita completa de cada um, com as quantidades certas para o meu filho.",
+          "correct": false,
+          "feedback": "Você pediu quantidade para uma criança de 6 anos, que é quase uma dose. Isso é conversa para o pediatra ou o farmacêutico, não para a IA."
+        },
+        {
+          "text": "Antes de eu fazer qualquer um desses, quais itens dessa lista eu deveria confirmar com um pediatra ou farmacêutico? Marque o que pode ser arriscado para uma criança de 6 anos.",
+          "correct": true,
+          "feedback": "Perfeito: a IA ajuda você a montar as perguntas, e a decisão fica com quem pode decidir. É assim em tudo que envolve saúde, dinheiro ou contrato."
+        },
+        {
+          "text": "Isso é seguro para criança? Responda só sim ou não.",
+          "correct": false,
+          "feedback": "Você pediu uma resposta de uma palavra sobre a saúde do seu filho, e vai recebê-la, sem nenhuma das ressalvas que importam. Peça o que conferir, não um veredito."
+        },
+        {
+          "text": "Me dê mais cinco receitas caseiras para dor de garganta.",
+          "correct": false,
+          "feedback": "Em vez de checar as três primeiras, você ficou com oito para checar. Antes de aumentar a lista, veja o que dessa lista é seguro."
+        }
+      ],
+      "resultPreview": "Dos três, o mel é o que mais exige atenção: ele não deve ser dado a bebês com menos de 1 ano, e, mesmo aos 6 anos, vale perguntar ao pediatra sobre a quantidade. O gargarejo com água e sal costuma ser tranquilo nessa idade, desde que a criança já saiba cuspir sem engolir. O chá morno é o mais simples, mas evite adoçar demais e sirva morno, nunca quente. Além disso, procure o pediatra se houver febre alta, dor há mais de dois dias, dificuldade para engolir ou manchas na garganta."
+    }
+  ]
+}
