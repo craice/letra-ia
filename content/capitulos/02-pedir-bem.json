@@ -1,0 +1,169 @@
+{
+  "id": "02-pedir-bem",
+  "title": "Pedir bem",
+  "icon": "🎯",
+  "phases": [
+    {
+      "id": "c2-tres-ingredientes",
+      "type": "explanation",
+      "title": "Conte, peça, diga como quer",
+      "cards": [
+        {
+          "title": "Contexto: conte a sua situação",
+          "text": "A IA não sabe nada sobre você. Quem é você, para quem é o texto, o que você já tem em casa, quanto dinheiro tem. Duas frases de contexto mudam tudo na resposta.",
+          "illustration": "🗺️"
+        },
+        {
+          "title": "Tarefa: peça com um verbo",
+          "text": "Diga o que você quer que ela faça: escreva, resuma, liste, explique, compare, corrija. Um verbo claro evita que a IA fique enrolando ou responda outra coisa.",
+          "illustration": "👉"
+        },
+        {
+          "title": "Formato: diga como quer receber",
+          "text": "Lista ou texto corrido? Três tópicos ou uma página? Tom sério ou brincalhão? Se você não disser, a IA escolhe por você e quase sempre escreve demais.",
+          "illustration": "📐"
+        }
+      ]
+    },
+    {
+      "id": "c2-receita-geladeira",
+      "type": "choose-prompt",
+      "situation": "São sete da noite. Na sua cozinha tem ovos, tomate e pão, e você quer fazer alguma coisa rápida. O que você escreve para a IA?",
+      "options": [
+        {
+          "text": "me dá uma receita",
+          "correct": false,
+          "feedback": "Receita de quê, com o quê? Sem saber o que você tem em casa, a IA vai sugerir algo com ingredientes que você não tem. Diga os ingredientes."
+        },
+        {
+          "text": "Tenho ovos, tomate e pão em casa. Sugira um jantar rápido com esses ingredientes, explicado em até 5 passos.",
+          "correct": true,
+          "feedback": "Tem tudo: o contexto (o que você tem), a tarefa (sugira um jantar rápido) e o formato (até 5 passos). A resposta já vem pronta para usar."
+        },
+        {
+          "text": "o que eu faço pra janta?",
+          "correct": false,
+          "feedback": "É a pergunta que você faria para alguém que abriu a sua geladeira. A IA não abriu. Conte o que tem e quanto tempo você tem."
+        },
+        {
+          "text": "receita fácil e rápida",
+          "correct": false,
+          "feedback": "Fácil e rápida já ajuda, mas falta o principal: os ingredientes que você tem. Acrescente ovos, tomate e pão ao pedido."
+        }
+      ],
+      "resultPreview": "Torrada com ovos mexidos e tomate. 1. Corte o tomate em cubinhos e tempere com sal. 2. Bata 3 ovos com uma pitada de sal. 3. Mexa os ovos em fogo baixo com um fio de óleo. 4. Torre as fatias de pão na frigideira. 5. Monte a torrada com os ovos e o tomate por cima."
+    },
+    {
+      "id": "c2-mensagem-grupo",
+      "type": "choose-prompt",
+      "situation": "O almoço de domingo na sua casa mudou de meio-dia para 13h. Você precisa avisar o grupo da família no celular, sem parecer que está bravo com alguém. O que você pede para a IA?",
+      "options": [
+        {
+          "text": "muda o horário do almoço",
+          "correct": false,
+          "feedback": "Assim a IA não sabe se você quer uma mensagem, um conselho ou uma agenda. Diga que quer uma mensagem e informe o horário novo."
+        },
+        {
+          "text": "Escreva uma mensagem curta para o grupo da família avisando que o almoço de domingo passou de meio-dia para 13h. Use um tom leve e simpático.",
+          "correct": true,
+          "feedback": "Você deu o contexto (grupo da família, mudança de horário), a tarefa (escreva uma mensagem), o formato (curta) e o tom (leve e simpático)."
+        },
+        {
+          "text": "Escreva um comunicado começando com \"Prezados familiares\" para informar a alteração do horário do almoço.",
+          "correct": false,
+          "feedback": "O tom não combina com um grupo de família: soa como aviso de condomínio. Peça um tom leve e uma mensagem de bate-papo."
+        },
+        {
+          "text": "Escreva uma mensagem simpática para avisar a família que o almoço de domingo mudou de horário.",
+          "correct": false,
+          "feedback": "O tom está certo, mas falta o dado principal: o novo horário. A IA vai deixar um espaço em branco ou inventar uma hora."
+        }
+      ],
+      "resultPreview": "Gente, atenção! O almoço de domingo saiu do meio-dia e passou para as 13h. Assim ninguém precisa correr de manhã. Estou esperando vocês! 😊"
+    },
+    {
+      "id": "c2-resumo-texto",
+      "type": "choose-prompt",
+      "situation": "A escola do seu filho mandou um comunicado de três páginas sobre a festa junina. Você quer saber só o essencial: datas e o que precisa levar. O que você faz?",
+      "options": [
+        {
+          "text": "Escrever \"resume isso\" e apertar enviar.",
+          "correct": false,
+          "feedback": "Você não colou o comunicado, então não existe \"isso\" para a IA ler. Cole o texto inteiro na mesma mensagem do pedido."
+        },
+        {
+          "text": "Colar o comunicado e escrever: \"explica\".",
+          "correct": false,
+          "feedback": "Colar o texto foi certo, mas \"explica\" é vago. Você vai receber três páginas viradas em outras três. Diga o formato e o que te interessa."
+        },
+        {
+          "text": "Colar o comunicado e escrever: \"Resuma em 3 tópicos, destacando as datas e o que eu preciso providenciar.\"",
+          "correct": true,
+          "feedback": "O texto colado é o contexto, \"resuma\" é a tarefa e \"3 tópicos com datas e o que providenciar\" é o formato. Você pediu exatamente o que precisa."
+        },
+        {
+          "text": "Colar o comunicado e escrever: \"resume em uma palavra\".",
+          "correct": false,
+          "feedback": "Você pediu um formato, mas apertado demais: uma palavra não cabe uma data nem uma lista. Peça alguns tópicos curtos."
+        }
+      ],
+      "resultPreview": "1. A festa junina acontece no sábado, 14 de junho, das 15h às 20h, no pátio da escola. 2. Ensaio da quadrilha na quinta, 12 de junho, às 14h; a criança precisa ir com roupa confortável. 3. Sua turma ficou responsável por levar uma garrafa de suco e um prato de doce até o dia 13."
+    },
+    {
+      "id": "c2-lista-compras",
+      "type": "choose-prompt",
+      "situation": "Você quer uma lista de compras para os almoços de quatro dias, para duas pessoas. Ninguém em casa come porco e o mês está apertado. O que você escreve?",
+      "options": [
+        {
+          "text": "Monte uma lista de compras para a semana, para duas pessoas.",
+          "correct": false,
+          "feedback": "Faltaram duas coisas que importam muito: nada de porco e gastar pouco. Sem elas, a lista pode vir cara e com itens que você não usa."
+        },
+        {
+          "text": "Monte um cardápio de restaurante com quatro pratos principais e a lista de ingredientes.",
+          "correct": false,
+          "feedback": "Cardápio de restaurante puxa pratos caros e complicados. Peça almoços do dia a dia, dizendo o orçamento curto."
+        },
+        {
+          "text": "Preciso dos almoços de 4 dias para 2 pessoas, sem carne de porco e gastando pouco. Monte a lista de compras organizada por seção do mercado.",
+          "correct": true,
+          "feedback": "Você deu os quatro limites (4 dias, 2 pessoas, sem porco, barato) e ainda pediu o formato: organizada por seção do mercado. É uma lista para levar no carrinho."
+        },
+        {
+          "text": "lista de compras barata sem porco",
+          "correct": false,
+          "feedback": "As restrições estão lá, mas ninguém sabe para quantos dias nem para quantas pessoas. A quantidade de cada item vai sair chutada."
+        }
+      ],
+      "resultPreview": "Hortifrúti: 1 kg de batata, 3 cenouras, 2 cebolas, 1 maço de couve, 4 tomates. Açougue: 700 g de coxa de frango, 400 g de patinho moído. Mercearia: 1 kg de arroz, 500 g de feijão, 1 lata de molho de tomate, 1 pacote de macarrão. Os quatro almoços: frango com batata, macarrão à bolonhesa, arroz com feijão e couve refogada, e bolinho de carne com purê."
+    },
+    {
+      "id": "c2-ajuste-fino",
+      "type": "choose-prompt",
+      "situation": "Sua filha de 8 anos perguntou por que o céu é azul e você travou. Você quer uma explicação que ela entenda, para ler em voz alta. O que você pede?",
+      "options": [
+        {
+          "text": "por que o céu é azul",
+          "correct": false,
+          "feedback": "Assim você recebe uma aula com espalhamento da luz e comprimento de onda. Diga para quem é a explicação e de que tamanho você quer."
+        },
+        {
+          "text": "Explique por que o céu é azul para uma criança de 8 anos, em até 4 frases, usando uma comparação do dia a dia.",
+          "correct": true,
+          "feedback": "Contexto (criança de 8 anos), tarefa (explique), formato (até 4 frases) e um pedido extra que faz milagre: uma comparação do dia a dia."
+        },
+        {
+          "text": "explica pra criança por que o céu é azul",
+          "correct": false,
+          "feedback": "Criança de 3 ou de 12 anos? E em quantas frases? Sem idade e sem tamanho, a resposta pode sair longa ou infantil demais."
+        },
+        {
+          "text": "Faça um texto científico explicando por que o céu é azul.",
+          "correct": false,
+          "feedback": "Você pediu justamente o oposto do que precisa: um texto científico vai encher de termos técnicos. Peça linguagem de criança e poucas frases."
+        }
+      ],
+      "resultPreview": "A luz do sol parece branca, mas por dentro ela tem todas as cores misturadas, como um arco-íris escondido. Quando essa luz entra no ar, a cor azul bate nas partículas do ar e se espalha por todo o céu. É como jogar purpurina azul para cima: ela se espalha e fica brilhando em todo lado. Por isso, quando você olha para cima, o que aparece é o azul."
+    }
+  ]
+}
