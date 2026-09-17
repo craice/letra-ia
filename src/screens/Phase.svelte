@@ -3,6 +3,7 @@
   import { findPhase } from '../lib/progress/unlock';
   import Explanation from '../phases/Explanation.svelte';
   import ChoosePrompt from '../phases/ChoosePrompt.svelte';
+  import BuildPrompt from '../phases/BuildPrompt.svelte';
   import Button from '../ui/Button.svelte';
 
   let {
@@ -41,6 +42,8 @@
         <Explanation phase={found.phase} onComplete={done} />
       {:else if found.phase.type === 'choose-prompt'}
         <ChoosePrompt phase={found.phase} onComplete={done} />
+      {:else if found.phase.type === 'build-prompt'}
+        <BuildPrompt phase={found.phase} onComplete={done} />
       {:else}
         <div class="card">
           <h2>Ainda não sei mostrar esta fase</h2>
