@@ -35,9 +35,9 @@
 </div>
 
 <style>
-  .lesson { margin-bottom: var(--space-4); font-size: 1.1rem; }
+  .lesson { margin-bottom: var(--space-4); }
   .illo { font-size: 2.2rem; margin-bottom: var(--space-2); }
-  .lesson h2 { font-size: 1.25rem; }
+  .lesson h2 { font-size: 1.6rem; }
   .lesson p { margin: 0; }
   .nav { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); align-items: center; }
 </style>

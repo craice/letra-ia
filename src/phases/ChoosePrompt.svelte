@@ -61,12 +61,12 @@
   .options { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
   .option {
     width: 100%; text-align: left; min-height: var(--touch);
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: var(--space-3) var(--space-4); color: var(--ink); font-size: 1.05rem; line-height: 1.4;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4); color: var(--ink); font-size: 1rem; line-height: 1.45;
   }
   .option:not(:disabled):hover { border-color: var(--ink-soft); }
   .option.wrong { opacity: 0.5; text-decoration: line-through; }
-  .option.right { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
+  .option.right { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--surface-soft); }
   .quote { color: var(--ink-soft); }
   .next { margin-top: var(--space-5); }
 </style>

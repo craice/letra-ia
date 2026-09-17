@@ -17,7 +17,7 @@
     desconfiar na hora certa e usar no dia a dia e no trabalho.
   </p>
 
-  <Speech mood="explaining">
+  <Speech mood="happy" size={72}>
     <p>Oi! Eu vou te acompanhar. São seis capítulos, com desafios rápidos. Sem pressa: dá para parar e voltar quando quiser.</p>
   </Speech>
 
@@ -38,7 +38,7 @@
 
 <style>
   .start { display: flex; flex-direction: column; gap: var(--space-5); min-height: 100dvh; }
-  .lead { font-size: 1.15rem; color: var(--ink-soft); font-style: italic; }
+  .lead { font-size: 1.1rem; color: var(--body); }
   .actions { display: flex; flex-direction: column; gap: var(--space-3); }
   footer { margin-top: auto; text-align: center; }
   footer a { color: inherit; }

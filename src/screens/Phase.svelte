@@ -67,5 +67,5 @@
   .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3); gap: var(--space-3); }
   .back { background: none; border: 0; padding: var(--space-2) 0; min-height: var(--touch); color: var(--ink-soft); }
   .progress { height: 3px; background: #e3e0d5; border-radius: 2px; margin-bottom: var(--space-5); overflow: hidden; }
-  .progress span { display: block; height: 100%; background: var(--accent); transition: width 300ms ease; }
+  .progress span { display: block; height: 100%; background: var(--ink); transition: width 300ms ease; }
 </style>

@@ -71,10 +71,10 @@
 <style>
   .top { margin-bottom: var(--space-3); }
   .back { background: none; border: 0; padding: var(--space-2) 0; min-height: var(--touch); color: var(--ink-soft); }
-  .cert { text-align: center; padding: var(--space-6) var(--space-4); border-width: 2px; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+  .cert { text-align: center; padding: var(--space-6) var(--space-4); display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
   .lead { font-size: 1.15rem; max-width: 34ch; }
   .meta { color: var(--ink-soft); font-size: 0.9rem; }
   .name { display: flex; flex-direction: column; gap: var(--space-2); width: 100%; max-width: 320px; text-align: left; margin-top: var(--space-3); }
-  input { min-height: var(--touch); padding: 0 var(--space-3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); font-size: 1rem; }
+  input { min-height: var(--touch); padding: 0 var(--space-3); border: 1px solid var(--line); border-radius: var(--radius-btn); background: var(--paper); font-size: 1rem; }
   .actions { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-5); }
 </style>

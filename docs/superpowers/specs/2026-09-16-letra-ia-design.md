@@ -187,47 +187,54 @@ funciona. `type` desconhecido mostra mensagem amigável e botão de voltar.
   `prefers-reduced-motion`.
 - Sem imagens pesadas; SVG ou emoji. Deve carregar rápido em 3G.
 
-### Identidade visual: "editorial calma"
+### Identidade visual: DESIGN.md (revisão de 2026-09-17)
 
-Inspirada no clima do site da Anthropic (papel, serifa, terracota, ilustração de linha,
-muito espaço), sem usar logo, nome, marca ou qualquer elemento que sugira produto oficial.
-O jogo é neutro entre ferramentas.
+Substitui a identidade "editorial calma" original. A referência é o DESIGN.md de
+https://www.designmd.co/d/claude, uma leitura de terceiros do site do Claude. Seguimos os
+tokens; ficam de fora logo, nome, símbolo e qualquer elemento de marca da Anthropic. O jogo
+continua neutro entre ferramentas.
 
-**Tipografia (Google Fonts, ou hospedadas no repositório):**
-- Newsreader (serifa) para quase tudo: títulos, textos, falas do mascote, opções de prompt.
-  Itálico para subtítulos e frases de apoio.
-- Instrument Sans (sem-serifa) só para rótulos pequenos em caixa alta ("Capítulo 2 · Fase 3
-  de 6"), botões e números.
-- Tamanho base generoso; títulos com espaçamento de letras levemente negativo.
+**Tipografia (Google Fonts):**
+- Cormorant Garamond 500 (substituta aberta de Copernicus) só em títulos h1 a h3, com
+  espaçamento negativo (-0,3 a -0,5px). Display nunca em negrito.
+- Inter (substituta de StyreneB) em todo o resto: corpo 17px/1,55, rótulos 12px/500 em
+  caixa alta com 1,5px de espaçamento, botões.
+- Pilha monoespaçada do sistema no rótulo do cartão de resposta da IA. Sem webfont extra.
 
-**Paleta (variáveis CSS):**
+**Paleta (variáveis CSS em `src/app.css`):**
 
-| Papel | Cor | Uso |
+| Variável | Cor | Papel no DESIGN.md |
 |---|---|---|
-| fundo | `#F0EEE6` | fundo da página |
-| cartão | `#FAF9F5` | cartões, balões, opções |
-| linha | `#DEDBD0` | bordas finas de 1px |
-| texto | `#141413` | texto principal, botão primário |
-| texto suave | `#5E5D59` | apoio, rótulos |
-| destaque | `#D97757` | progresso, seleção, estrelas, botão de ação, brilho do mascote |
-| acerto | `#788C5D` | feedback de sucesso |
-| apoio | `#6A9BCC` | detalhes ocasionais em ilustrações |
-| erro | tom terroso avermelhado, definido na implementação | feedback de erro, sempre com ícone e texto |
+| `--paper` | `#faf9f5` | canvas |
+| `--card` | `#efe9de` | surface-card (balão do mascote, cartões) |
+| `--surface-soft` | `#f5f0e8` | seleção e fase atual |
+| `--line` | `#e6dfd8` | hairline |
+| `--ink` | `#141413` | títulos, seleção, progresso, estrelas, botão secundário escuro |
+| `--body` | `#3d3d3a` | texto corrido |
+| `--ink-soft` | `#65635d` | muted. Um passo mais escuro que `#6c6a64` para manter 4,5:1 sobre `--card` |
+| `--accent` | `#cc785c` | primary: só botão principal e mascote |
+| `--accent-strong` | `#a9583e` | primary-active: botão pressionado, links, boca do mascote |
+| `--surface-dark` / `--on-dark` | `#181715` / `#faf9f5` | cartão "O que a IA responderia" |
+| `--success` / `--error` | `#5f7347` / `#b5533c` | feedback, sempre com ícone e texto |
 
-Tema escuro na v1 fica **fora de escopo**: a identidade depende do papel creme. Apenas
-`prefers-reduced-motion` é respeitado.
+**Coral é escasso:** progresso, seleção, pontos do mapa e estrelas usam `--ink`. Coral fica
+no botão principal e no mascote.
 
-**Formas:** cartões com raio de 12 a 14px e borda de 1px, sem sombra forte. Botões em
-pílula. Barra de progresso fina (3px). Fases no mapa como pontos pequenos, preenchidos em
-terracota quando concluídos.
+**Contraste do botão principal:** branco sobre `#cc785c` dá 3,27:1. O rótulo usa 19px em
+peso 700, que é "texto grande" pela WCAG e exige 3:1. É o único desvio do token de
+tipografia de botão do DESIGN.md (14px/500), feito para manter AA.
 
-**Mascote:** rosto redondo em traço fino de 1,5px na cor do texto, fundo do cartão, três
-raios curtos em terracota no topo. Quatro expressões trocam apenas boca e olhos.
+**Formas:** cartões com raio de 12px, botões e campos com 8px, 48px de altura mínima nos
+botões. Sem sombra. O ritmo creme para escuro aparece no cartão de resposta da IA.
 
-**Ilustrações dos cartões de explicação:** traço de linha fina monocromático com um toque
-de terracota, no mesmo estilo do mascote. Emoji como fallback aceitável.
+**Mascote "Letra":** um "a" minúsculo em pixel-art (grade 13x13, SVG de retângulos,
+`shape-rendering: crispEdges`), corpo coral, o bojo da letra é o rosto. Quatro expressões
+(neutro, explicando, feliz, "hmm") trocam só olhos e boca. Pisca a cada 5s e dá um pulinho
+quando feliz, com `steps()`; tudo desligado por `prefers-reduced-motion`. Personagem
+original, no espírito pixel-art do mascote do Claude Code, sem copiá-lo. O favicon usa o
+mesmo desenho.
 
-Mockup de referência: `docs/superpowers/specs/2026-09-16-letra-ia-visual-mockup.html`, variação B.
+Tema escuro continua fora de escopo.
 
 ## 8. Testes
 

@@ -11,5 +11,5 @@
 
 <style>
   .stars { letter-spacing: 2px; color: var(--line); font-size: 1.1rem; }
-  .on { color: var(--accent); }
+  .on { color: var(--ink); }
 </style>

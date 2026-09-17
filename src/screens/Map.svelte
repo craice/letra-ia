@@ -99,23 +99,23 @@
 <style>
   .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); }
   .back { background: none; border: 0; padding: var(--space-2) 0; min-height: var(--touch); color: var(--ink-soft); }
-  .lead { color: var(--ink-soft); font-style: italic; }
+  .lead { color: var(--ink-soft); }
   .chapters { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: calc(var(--touch) + var(--space-5)); }
   .chapter.locked { opacity: 0.55; }
   .head { display: flex; gap: var(--space-3); align-items: center; }
   .head h2 { font-size: 1.15rem; margin: 0; }
   .num { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); font-size: 0.9rem; flex: none; }
-  .num.done { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .num.done { background: var(--ink); color: var(--on-dark); border-color: var(--ink); }
   .phases { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: flex; flex-direction: column; gap: var(--space-1); }
   .phase { display: flex; align-items: center; gap: var(--space-3); width: 100%; min-height: var(--touch); background: none; border: 0; border-radius: var(--radius); padding: var(--space-2); text-align: left; color: var(--ink); }
   .phase:disabled { color: var(--ink-soft); cursor: default; opacity: 0.6; }
   .phase.current { background: var(--accent-soft); }
   .dot { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--font-sans); font-size: 0.75rem; flex: none; }
-  .dot.filled { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .dot.filled { background: var(--ink); border-color: var(--ink); color: var(--on-dark); }
   .phase.current .dot { animation: pulse 2s infinite; }
   @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 var(--accent-soft); }
-    50% { box-shadow: 0 0 0 6px var(--accent-soft); }
+    0%, 100% { box-shadow: 0 0 0 0 var(--line); }
+    50% { box-shadow: 0 0 0 6px var(--line); }
   }
   .ptitle { flex: 1; }
   .cta { position: sticky; bottom: var(--space-4); margin-top: var(--space-5); }

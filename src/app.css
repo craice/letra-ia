@@ -1,29 +1,38 @@
 :root {
-  --paper: #f0eee6;
-  --card: #faf9f5;
-  --line: #dedbd0;
+  /* Tokens from the DESIGN.md this project follows (docs/superpowers/specs). */
+  --paper: #faf9f5; /* canvas */
+  --card: #efe9de; /* surface-card */
+  --surface-soft: #f5f0e8;
+  --line: #e6dfd8; /* hairline */
   --ink: #141413;
-  --ink-soft: #5e5d59;
-  --accent: #d97757;
-  --accent-strong: #b8553a;
-  --accent-soft: #fbf3ee;
-  --success: #788c5d;
+  --body: #3d3d3a;
+  --ink-soft: #65635d; /* muted, one step darker than #6c6a64 to hold 4.5:1 on --card */
+  --muted-soft: #8e8b82;
+  --accent: #cc785c; /* primary: CTAs and the mascot only */
+  --accent-strong: #a9583e; /* primary-active */
+  --accent-soft: #f5f0e8;
+  --surface-dark: #181715;
+  --on-dark: #faf9f5;
+  --on-dark-soft: #a8a49a;
+  --success: #5f7347;
   --success-soft: #eef2e7;
   --support: #6a9bcc;
   --error: #b5533c;
   --error-soft: #f7e9e4;
 
-  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'EB Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
 
-  --radius: 14px;
-  --radius-pill: 999px;
+  --radius: 12px; /* rounded.lg: cards */
+  --radius-btn: 8px; /* rounded.md: buttons and inputs */
+  --radius-pill: 9999px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
   --space-5: 24px;
-  --space-6: 40px;
+  --space-6: 48px;
   --max-width: 640px;
   --touch: 44px;
 }
@@ -41,30 +50,29 @@ html {
 body {
   margin: 0;
   background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.5;
-  font-optical-sizing: auto;
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-serif);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
+  font-weight: 500; /* display never goes bold */
+  color: var(--ink);
+  line-height: 1.12;
   margin: 0 0 var(--space-3);
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
+h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
+h2 { font-size: 1.75rem; letter-spacing: -0.3px; }
+h3 { font-size: 1.4rem; letter-spacing: -0.3px; }
 
 p { margin: 0 0 var(--space-3); }
 
-a { color: var(--accent); }
+a { color: var(--accent-strong); }
 
 button {
   font: inherit;
@@ -72,7 +80,7 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--accent-strong);
   outline-offset: 3px;
 }
 
@@ -84,7 +92,7 @@ main:focus {
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--ink-soft);
 }
@@ -97,7 +105,7 @@ main:focus {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: var(--space-4);
+  padding: 20px;
 }
 
 .visually-hidden {

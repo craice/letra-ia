@@ -87,16 +87,16 @@
   .blocks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
   .block {
     width: 100%; text-align: left; min-height: var(--touch); display: flex; gap: var(--space-3); align-items: flex-start;
-    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: var(--space-3) var(--space-4); color: var(--ink); font-size: 1.05rem; line-height: 1.4;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4); color: var(--ink); font-size: 1rem; line-height: 1.45;
   }
-  .block.on { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
+  .block.on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--surface-soft); }
   .block.bad { border-color: var(--error); box-shadow: inset 0 0 0 1px var(--error); background: var(--error-soft); }
   .block:disabled { cursor: default; }
   .check { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 0.8rem; flex: none; margin-top: 2px; }
-  .block.on .check { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .composed { margin-top: var(--space-4); border-left: 3px solid var(--accent); }
+  .block.on .check { background: var(--ink); border-color: var(--ink); color: var(--on-dark); }
+  .composed { margin-top: var(--space-4); border-color: transparent; }
   .composed p { margin: 0; }
-  .empty { color: var(--ink-soft); font-style: italic; }
+  .empty { color: var(--ink-soft); }
   .actions { margin-top: var(--space-4); }
 </style>
