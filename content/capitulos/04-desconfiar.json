@@ -121,7 +121,7 @@
         }
       ],
       "successFeedback": "Pedido bem montado: contexto, tarefa e formato. E o melhor é que o formato já pede a lista do que confirmar com quem entende do assunto.",
-      "resultPreview": "1. A vacina da gripe prepara o corpo para reconhecer o vírus da gripe e reagir mais rápido. 2. Ela não impede toda gripe, mas reduz muito a chance de um caso grave, com internação. 3. Como o vírus muda todo ano, a vacina é atualizada e tomada uma vez por ano. 4. Pessoas com mais de 60 anos estão entre os grupos que mais se beneficiam, por isso ela é oferecida de graça no posto. 5. Os efeitos mais comuns são dor no braço e um mal-estar leve por um ou dois dias. Para confirmar com o médico: se algum remédio que ela usa interfere, se alguma alergia impede a vacina e qual é a melhor época para tomar este ano."
+      "resultPreview": "1. A vacina da gripe prepara o corpo para reconhecer o vírus da gripe e reagir mais rápido.\n2. Ela não impede toda gripe, mas reduz muito a chance de um caso grave, com internação.\n3. Como o vírus muda todo ano, a vacina é atualizada e tomada uma vez por ano.\n4. Pessoas com mais de 60 anos estão entre os grupos que mais se beneficiam, por isso ela é oferecida de graça no posto.\n5. Os efeitos mais comuns são dor no braço e um mal-estar leve por um ou dois dias.\nPara confirmar com o médico: se algum remédio que ela usa interfere, se alguma alergia impede a vacina e qual é a melhor época para tomar este ano."
     },
     {
       "id": "c4-sinais-de-alerta",

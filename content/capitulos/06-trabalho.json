@@ -93,7 +93,7 @@
           "feedback": "\"Bonito\" não é um pedido: a IA vai caprichar no texto e você continua sem saber o que fazer até sexta. Peça o recorte que resolve o seu problema."
         }
       ],
-      "resultPreview": "Tarefa | Prazo. Enviar a planilha de custos revisada ao financeiro | 20/03. Confirmar com o fornecedor a data de entrega do novo lote | 18/03. Levantar as reclamações do mês para a próxima reunião | 25/03. Obs.: no item sobre o treinamento, a ata cita \"a equipe\" e não deixa claro se a responsabilidade é sua. Vale confirmar."
+      "resultPreview": "Tarefa | Prazo.\nEnviar a planilha de custos revisada ao financeiro | 20/03.\nConfirmar com o fornecedor a data de entrega do novo lote | 18/03.\nLevantar as reclamações do mês para a próxima reunião | 25/03.\nObs.: no item sobre o treinamento, a ata cita \"a equipe\" e não deixa claro se a responsabilidade é sua. Vale confirmar."
     },
     {
       "id": "c6-planilha",
@@ -182,7 +182,7 @@
         }
       ],
       "successFeedback": "Os quatro ingredientes estão lá: contexto, tarefa, formato e tom. Repare que o tom é o que faz a diferença quando o público tem pressa.",
-      "resultPreview": "Slide 1 - Vendas em alta, devoluções em alerta: trimestre fecha com +12% em vendas; devoluções crescem acima do esperado; resultado líquido ainda positivo. Slide 2 - O que puxou as vendas: campanhas de fim de mês; aumento do tíquete médio; reposição mais rápida. Slide 3 - O que está voltando: principais categorias devolvidas; motivos mais citados; quando a devolução acontece. Slide 4 - Quanto isso custa: valor devolvido no trimestre; custo de reprocessar; efeito na margem. Slide 5 - Plano para o próximo trimestre: três ações, com responsável e prazo. Slide 6 - O que eu preciso da diretoria: uma decisão, um recurso, uma data de retorno."
+      "resultPreview": "Slide 1 - Vendas em alta, devoluções em alerta: trimestre fecha com +12% em vendas; devoluções crescem acima do esperado; resultado líquido ainda positivo.\nSlide 2 - O que puxou as vendas: campanhas de fim de mês; aumento do tíquete médio; reposição mais rápida.\nSlide 3 - O que está voltando: principais categorias devolvidas; motivos mais citados; quando a devolução acontece.\nSlide 4 - Quanto isso custa: valor devolvido no trimestre; custo de reprocessar; efeito na margem.\nSlide 5 - Plano para o próximo trimestre: três ações, com responsável e prazo.\nSlide 6 - O que eu preciso da diretoria: uma decisão, um recurso, uma data de retorno."
     },
     {
       "id": "c6-aprender-algo-novo",
@@ -210,7 +210,7 @@
           "feedback": "São centenas, e você não vai usar nem trinta. Uma lista enorme cansa e não fixa nada. Peça poucas por vez, com um exercício para praticar."
         }
       ],
-      "resultPreview": "Plano de 5 dias, 20 minutos por dia. Dia 1 - Se achar na planilha: linhas, colunas, células e como digitar texto, número e data sem bagunçar o formato. Exercício de hoje: monte uma tabela com 10 linhas de gastos da semana, com as colunas Data, Descrição e Valor, e salve o arquivo. Faça e me diga quando terminar, que eu passo o dia 2."
+      "resultPreview": "Plano de 5 dias, 20 minutos por dia.\nDia 1 - Se achar na planilha: linhas, colunas, células e como digitar texto, número e data sem bagunçar o formato.\nExercício de hoje: monte uma tabela com 10 linhas de gastos da semana, com as colunas Data, Descrição e Valor, e salve o arquivo.\nFaça e me diga quando terminar, que eu passo o dia 2."
     },
     {
       "id": "c6-revisar-antes-de-enviar",

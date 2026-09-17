@@ -86,7 +86,7 @@
           "feedback": "A IA não sabe onde você está e pode inventar um número que parece real. Para telefone e endereço, use o buscador ou o app da farmácia."
         }
       ],
-      "resultPreview": "A losartana é usada para controlar a pressão arterial. O ibuprofeno é um anti-inflamatório para dor e inflamação. Perguntas para levar ao farmacêutico: 1. Tomar os dois juntos pode afetar a pressão ou os rins? 2. Existe outro remédio para dor mais indicado para quem usa losartana? 3. Há algum sinal de alerta que devo observar?"
+      "resultPreview": "A losartana é usada para controlar a pressão arterial. O ibuprofeno é um anti-inflamatório para dor e inflamação.\nPerguntas para levar ao farmacêutico:\n1. Tomar os dois juntos pode afetar a pressão ou os rins?\n2. Existe outro remédio para dor mais indicado para quem usa losartana?\n3. Há algum sinal de alerta que devo observar?"
     },
     {
       "id": "c1-cada-conversa-do-zero",

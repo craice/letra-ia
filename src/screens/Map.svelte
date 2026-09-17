@@ -96,7 +96,7 @@
   .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); }
   .back { background: none; border: 0; padding: var(--space-2) 0; min-height: var(--touch); color: var(--ink-soft); }
   .lead { color: var(--ink-soft); font-style: italic; }
-  .chapters { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-3); }
+  .chapters { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: calc(var(--touch) + var(--space-5)); }
   .chapter.locked { opacity: 0.55; }
   .head { display: flex; gap: var(--space-3); align-items: center; }
   .head h2 { font-size: 1.15rem; margin: 0; }

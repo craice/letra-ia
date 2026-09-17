@@ -35,6 +35,6 @@
   .btn:active:not(:disabled) { transform: scale(0.98); }
   .btn:disabled { opacity: 0.45; cursor: not-allowed; }
   .primary { background: var(--ink); color: var(--paper); }
-  .accent { background: var(--accent); color: #fff; }
+  .accent { background: var(--accent-strong); color: #fff; }
   .ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 </style>

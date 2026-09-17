@@ -98,7 +98,7 @@
         }
       ],
       "successFeedback": "Pedido redondo: tem contexto, tarefa e formato. Quanto mais você contar sobre a pessoa, mais certeiras ficam as ideias.",
-      "resultPreview": "Boas ideias para o seu pai, dentro dos 150 reais: 1. Uma caixa organizadora de anzóis e iscas, para ele parar de perder tudo no fundo da bolsa. 2. Uma faca de cozinha com bom fio, que serve tanto para limpar peixe quanto para o dia a dia. 3. Um chapéu de pesca com proteção solar, leve e dobrável. 4. Um livro de receitas de peixes e frutos do mar. 5. Uma tábua de corte grande de madeira, com espaço para escoar o líquido."
+      "resultPreview": "Boas ideias para o seu pai, dentro dos 150 reais:\n1. Uma caixa organizadora de anzóis e iscas, para ele parar de perder tudo no fundo da bolsa.\n2. Uma faca de cozinha com bom fio, que serve tanto para limpar peixe quanto para o dia a dia.\n3. Um chapéu de pesca com proteção solar, leve e dobrável.\n4. Um livro de receitas de peixes e frutos do mar.\n5. Uma tábua de corte grande de madeira, com espaço para escoar o líquido."
     },
     {
       "id": "c3-pedir-opcoes",
@@ -126,7 +126,7 @@
           "feedback": "\"O melhor\" não existe, e a IA vai cravar um só, com ares de certeza. Peça várias opções e escolha você."
         }
       ],
-      "resultPreview": "1. Bolo da Vovó. 2. Cenoura Caseira. 3. Bolo de Cenoura da Vizinhança. 4. Fatia de Domingo. 5. Cenourinha com Cobertura. 6. Bolo do Corredor. 7. Cenoura Feliz. 8. Chocolate em Cima, Amor Embaixo."
+      "resultPreview": "1. Bolo da Vovó.\n2. Cenoura Caseira.\n3. Bolo de Cenoura da Vizinhança.\n4. Fatia de Domingo.\n5. Cenourinha com Cobertura.\n6. Bolo do Corredor.\n7. Cenoura Feliz.\n8. Chocolate em Cima, Amor Embaixo."
     },
     {
       "id": "c3-explique-o-que-nao-gostou",

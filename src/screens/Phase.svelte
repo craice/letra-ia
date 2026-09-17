@@ -41,8 +41,10 @@
       {#if found.phase.type === 'explanation'}
         <Explanation phase={found.phase} onComplete={done} />
       {:else if found.phase.type === 'choose-prompt'}
+        <h1 class="visually-hidden">Desafio {found.phaseIndex + 1}: {chapter.title}</h1>
         <ChoosePrompt phase={found.phase} onComplete={done} />
       {:else if found.phase.type === 'build-prompt'}
+        <h1 class="visually-hidden">Desafio {found.phaseIndex + 1}: {chapter.title}</h1>
         <BuildPrompt phase={found.phase} onComplete={done} />
       {:else}
         <div class="card">

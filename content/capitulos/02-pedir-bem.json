@@ -51,7 +51,7 @@
           "feedback": "Fácil e rápida já ajuda, mas falta o principal: os ingredientes que você tem. Acrescente ovos, tomate e pão ao pedido."
         }
       ],
-      "resultPreview": "Torrada com ovos mexidos e tomate. 1. Corte o tomate em cubinhos e tempere com sal. 2. Bata 3 ovos com uma pitada de sal. 3. Mexa os ovos em fogo baixo com um fio de óleo. 4. Torre as fatias de pão na frigideira. 5. Monte a torrada com os ovos e o tomate por cima."
+      "resultPreview": "Torrada com ovos mexidos e tomate.\n1. Corte o tomate em cubinhos e tempere com sal.\n2. Bata 3 ovos com uma pitada de sal.\n3. Mexa os ovos em fogo baixo com um fio de óleo.\n4. Torre as fatias de pão na frigideira.\n5. Monte a torrada com os ovos e o tomate por cima."
     },
     {
       "id": "c2-mensagem-grupo",
@@ -107,7 +107,7 @@
           "feedback": "Você pediu um formato, mas apertado demais: em uma palavra não cabe uma data nem uma lista. Peça alguns tópicos curtos."
         }
       ],
-      "resultPreview": "1. A festa junina acontece no sábado, 14 de junho, das 15h às 20h, no pátio da escola. 2. Ensaio da quadrilha na quinta, 12 de junho, às 14h; a criança precisa ir com roupa confortável. 3. Sua turma ficou responsável por levar uma garrafa de suco e um prato de doce até o dia 13."
+      "resultPreview": "1. A festa junina acontece no sábado, 14 de junho, das 15h às 20h, no pátio da escola.\n2. Ensaio da quadrilha na quinta, 12 de junho, às 14h; a criança precisa ir com roupa confortável.\n3. Sua turma ficou responsável por levar uma garrafa de suco e um prato de doce até o dia 13."
     },
     {
       "id": "c2-lista-compras",
@@ -135,7 +135,7 @@
           "feedback": "As restrições estão lá, mas ninguém sabe para quantos dias nem para quantas pessoas. A quantidade de cada item vai sair chutada."
         }
       ],
-      "resultPreview": "Hortifrúti: 1 kg de batata, 3 cenouras, 2 cebolas, 1 maço de couve, 4 tomates. Açougue: 700 g de coxa de frango, 400 g de patinho moído. Mercearia: 1 kg de arroz, 500 g de feijão, 1 lata de molho de tomate, 1 pacote de macarrão. Os quatro almoços: frango com batata, macarrão à bolonhesa, arroz com feijão e couve refogada, e bolinho de carne com purê."
+      "resultPreview": "Hortifrúti: 1 kg de batata, 3 cenouras, 2 cebolas, 1 maço de couve, 4 tomates.\nAçougue: 700 g de coxa de frango, 400 g de patinho moído.\nMercearia: 1 kg de arroz, 500 g de feijão, 1 lata de molho de tomate, 1 pacote de macarrão.\nOs quatro almoços: frango com batata, macarrão à bolonhesa, arroz com feijão e couve refogada, e bolinho de carne com purê."
     },
     {
       "id": "c2-ajuste-fino",

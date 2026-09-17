@@ -46,12 +46,14 @@
   }
 </script>
 
-{#if screen.name === 'start'}
-  <Start {hasProgress} onStart={start} onReset={reset} />
-{:else if screen.name === 'map'}
-  <Map {loaded} {chapters} progress={progressStore.progress} onOpenPhase={openPhase} onHome={() => (screen = { name: 'start' })} />
-{:else if screen.name === 'phase'}
-  <Phase {chapters} phaseId={screen.phaseId} onComplete={completePhase} onBack={goToMap} />
-{:else}
-  <Certificate {chapters} progress={progressStore.progress} onSetName={(n) => progressStore.setPlayerName(n)} onHome={() => (screen = { name: 'start' })} />
-{/if}
+<main>
+  {#if screen.name === 'start'}
+    <Start {hasProgress} onStart={start} onReset={reset} />
+  {:else if screen.name === 'map'}
+    <Map {loaded} {chapters} progress={progressStore.progress} onOpenPhase={openPhase} onHome={() => (screen = { name: 'start' })} />
+  {:else if screen.name === 'phase'}
+    <Phase {chapters} phaseId={screen.phaseId} onComplete={completePhase} onBack={goToMap} />
+  {:else}
+    <Certificate {chapters} progress={progressStore.progress} onSetName={(n) => progressStore.setPlayerName(n)} onHome={() => (screen = { name: 'start' })} />
+  {/if}
+</main>
