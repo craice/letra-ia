@@ -53,16 +53,17 @@
               {#each chapter.phases as phase, j (phase.id)}
                 {@const result = progress.phases[phase.id]}
                 {@const open = isPhaseUnlocked(chapters, progress, phase.id)}
+                {@const title = phase.type === 'explanation' ? phase.title : `Desafio ${j + 1}`}
                 <li>
                   <button
                     class="phase"
                     class:current={phase.id === next}
                     disabled={!open}
                     onclick={() => onOpenPhase(phase.id)}
-                    aria-label={`Fase ${j + 1}${result ? `, ${result.stars} estrelas` : open ? ', disponível' : ', bloqueada'}`}
+                    aria-label={`${title}. Fase ${j + 1}${result ? `, ${result.stars} estrelas` : open ? ', disponível' : ', bloqueada'}`}
                   >
                     <span class="dot" class:filled={!!result} aria-hidden="true">{j + 1}</span>
-                    <span class="ptitle">{phase.type === 'explanation' ? phase.title : `Desafio ${j + 1}`}</span>
+                    <span class="ptitle">{title}</span>
                     {#if result}<Stars value={result.stars} />{/if}
                   </button>
                 </li>
