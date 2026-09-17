@@ -36,7 +36,19 @@ export function loadChapters(): LoadedChapter[] {
 
   const crossErrors = validateContent(validChapters(loaded));
   if (crossErrors.length > 0) {
-    for (const item of loaded) if (item.chapter) item.errors.push(...crossErrors);
+    // A duplicate chapter/phase id spans two files, so it is impossible to tell
+    // from here which file is "wrong". Rather than keep one arbitrary side
+    // valid (which would silently drop or misattribute phases in unlock and
+    // progress logic), treat every otherwise-valid chapter as unusable and
+    // surface the same errors on each. In practice this never reaches
+    // deploy: the content test (tests/content.test.ts) runs validateContent
+    // against all chapters and fails the build first.
+    for (const item of loaded) {
+      if (item.chapter) {
+        item.chapter = null;
+        item.errors.push(...crossErrors);
+      }
+    }
   }
   return loaded;
 }

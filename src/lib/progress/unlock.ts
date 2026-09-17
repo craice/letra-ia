@@ -40,3 +40,16 @@ export function isAllComplete(chapters: Chapter[], p: Progress): boolean {
   const flat = flattenPhases(chapters);
   return flat.length > 0 && nextPhaseId(chapters, p) === null;
 }
+
+/**
+ * 1-based count of non-explanation phases in `chapter`, up to and including
+ * `phaseIndex`. Used to label challenges ("Desafio N") without counting the
+ * explanation phases that precede them.
+ */
+export function challengeNumber(chapter: Chapter, phaseIndex: number): number {
+  let n = 0;
+  for (let i = 0; i <= phaseIndex; i++) {
+    if (chapter.phases[i]!.type !== 'explanation') n++;
+  }
+  return n;
+}

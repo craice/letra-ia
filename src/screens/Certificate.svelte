@@ -6,12 +6,13 @@
   import Mascot from '../ui/Mascot.svelte';
 
   let {
-    chapters, progress, onSetName, onHome,
+    chapters, progress, onSetName, onHome, onMap,
   }: {
     chapters: Chapter[];
     progress: Progress;
     onSetName: (name: string) => void;
     onHome: () => void;
+    onMap: () => void;
   } = $props();
 
   let name = $state(untrack(() => progress.playerName ?? ''));
@@ -63,6 +64,7 @@
     {#if canShare}
       <Button variant="ghost" onclick={share}>Compartilhar</Button>
     {/if}
+    <Button variant="ghost" onclick={onMap}>Ver o mapa</Button>
   </div>
 </section>
 

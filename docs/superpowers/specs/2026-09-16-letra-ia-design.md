@@ -53,7 +53,7 @@ justificativa no PR.
 ```
 letra-ia/
 ├── content/
-│   ├── capitulos.json          # lista ordenada: id, título, ícone
+│   ├── capitulos.json          # ordem dos capítulos: { "order": [ids] }; título e ícone ficam no arquivo de cada capítulo
 │   └── capitulos/
 │       ├── 01-o-que-e-ia.json
 │       └── ...

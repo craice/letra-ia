@@ -42,4 +42,26 @@ describe('content/', () => {
       expect(chapter.phases[0]?.type, file).toBe('explanation');
     }
   });
+
+  it('chapters 01 and 02 introduce concepts without build-prompt phases', () => {
+    for (const file of files) {
+      if (!/^0[12]-/.test(file)) continue;
+      const chapter = readJson(join(chaptersDir, file)) as Chapter;
+      for (const phase of chapter.phases) {
+        expect(phase.type, `${file} ${phase.id}`).not.toBe('build-prompt');
+      }
+    }
+  });
+
+  it('every phase id is prefixed with its chapter number (NN-*.json -> c<N>-)', () => {
+    for (const file of files) {
+      const match = file.match(/^(\d+)-/);
+      if (!match) continue;
+      const n = parseInt(match[1]!, 10);
+      const chapter = readJson(join(chaptersDir, file)) as Chapter;
+      for (const phase of chapter.phases) {
+        expect(phase.id, file).toMatch(new RegExp(`^c${n}-`));
+      }
+    }
+  });
 });

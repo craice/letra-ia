@@ -22,7 +22,7 @@ salvo no seu navegador.
 
 ## Rodar no seu computador
 
-Precisa do Node.js 20 ou mais novo.
+Precisa do Node.js 20.19 ou mais novo (ou 22.12+).
 
 ```bash
 npm install

@@ -17,6 +17,12 @@
   const chapters = validChapters(loaded);
 
   let screen = $state<Screen>({ name: 'start' });
+  let mainEl: HTMLElement | undefined;
+
+  $effect(() => {
+    screen;
+    mainEl?.focus({ preventScroll: false });
+  });
 
   const hasProgress = $derived(Object.keys(progressStore.progress.phases).length > 0);
 
@@ -46,14 +52,27 @@
   }
 </script>
 
-<main>
+<main tabindex="-1" bind:this={mainEl}>
   {#if screen.name === 'start'}
     <Start {hasProgress} onStart={start} onReset={reset} />
   {:else if screen.name === 'map'}
-    <Map {loaded} {chapters} progress={progressStore.progress} onOpenPhase={openPhase} onHome={() => (screen = { name: 'start' })} />
+    <Map
+      {loaded}
+      {chapters}
+      progress={progressStore.progress}
+      onOpenPhase={openPhase}
+      onHome={() => (screen = { name: 'start' })}
+      onCertificate={() => (screen = { name: 'certificate' })}
+    />
   {:else if screen.name === 'phase'}
     <Phase {chapters} phaseId={screen.phaseId} onComplete={completePhase} onBack={goToMap} />
   {:else}
-    <Certificate {chapters} progress={progressStore.progress} onSetName={(n) => progressStore.setPlayerName(n)} onHome={() => (screen = { name: 'start' })} />
+    <Certificate
+      {chapters}
+      progress={progressStore.progress}
+      onSetName={(n) => progressStore.setPlayerName(n)}
+      onHome={() => (screen = { name: 'start' })}
+      onMap={() => (screen = { name: 'map' })}
+    />
   {/if}
 </main>

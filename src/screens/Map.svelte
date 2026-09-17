@@ -3,18 +3,19 @@
   import type { LoadedChapter } from '../lib/content/load';
   import type { Progress } from '../lib/progress/model';
   import { totalStars } from '../lib/progress/model';
-  import { isChapterUnlocked, isPhaseUnlocked, nextPhaseId } from '../lib/progress/unlock';
+  import { challengeNumber, isChapterUnlocked, isPhaseUnlocked, nextPhaseId } from '../lib/progress/unlock';
   import Stars from '../ui/Stars.svelte';
   import Button from '../ui/Button.svelte';
 
   let {
-    loaded, chapters, progress, onOpenPhase, onHome,
+    loaded, chapters, progress, onOpenPhase, onHome, onCertificate,
   }: {
     loaded: LoadedChapter[];
     chapters: Chapter[];
     progress: Progress;
     onOpenPhase: (id: string) => void;
     onHome: () => void;
+    onCertificate: () => void;
   } = $props();
 
   const next = $derived(nextPhaseId(chapters, progress));
@@ -42,7 +43,8 @@
         {@const unlocked = isChapterUnlocked(chapters, progress, chapter.id)}
         <li class="chapter card" class:locked={!unlocked}>
           <div class="head">
-            <span class="num sans" class:done={chapterDone(chapter) === chapter.phases.length}>{i + 1}</span>
+            <span class="num sans" class:done={chapterDone(chapter) === chapter.phases.length} aria-hidden="true">{chapter.icon}</span>
+            <span class="visually-hidden">Capítulo {i + 1}</span>
             <div>
               <h2>{chapter.title}</h2>
               <span class="kicker">{chapterDone(chapter)} de {chapter.phases.length} fases</span>
@@ -53,7 +55,7 @@
               {#each chapter.phases as phase, j (phase.id)}
                 {@const result = progress.phases[phase.id]}
                 {@const open = isPhaseUnlocked(chapters, progress, phase.id)}
-                {@const title = phase.type === 'explanation' ? phase.title : `Desafio ${j + 1}`}
+                {@const title = phase.type === 'explanation' ? phase.title : `Desafio ${challengeNumber(chapter, j)}`}
                 <li>
                   <button
                     class="phase"
@@ -85,11 +87,13 @@
     {/each}
   </ol>
 
-  {#if next}
-    <div class="cta">
+  <div class="cta">
+    {#if next}
       <Button variant="accent" onclick={() => onOpenPhase(next)}>Continuar</Button>
-    </div>
-  {/if}
+    {:else}
+      <Button variant="accent" onclick={onCertificate}>Ver certificado</Button>
+    {/if}
+  </div>
 </section>
 
 <style>
@@ -108,6 +112,11 @@
   .phase.current { background: var(--accent-soft); }
   .dot { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--font-sans); font-size: 0.75rem; flex: none; }
   .dot.filled { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .phase.current .dot { animation: pulse 2s infinite; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 var(--accent-soft); }
+    50% { box-shadow: 0 0 0 6px var(--accent-soft); }
+  }
   .ptitle { flex: 1; }
   .cta { position: sticky; bottom: var(--space-4); margin-top: var(--space-5); }
 </style>

@@ -27,7 +27,11 @@ e `noise` (armadilha). Toda peça `noise` precisa de `feedback` explicando por q
 - Não coloque dados pessoais reais nem de terceiros nos exemplos.
 
 O `id` de cada fase precisa ser único em todo o jogo. Use o prefixo do capítulo
-(`c2-`, `c3-`...).
+(`c2-`, `c3-`...). O prefixo é obrigatório: o id de toda fase do capítulo `NN-*.json`
+precisa começar com `cN-` (por exemplo, fases de `04-desconfiar.json` começam com `c4-`).
+
+Se estiver propondo um capítulo novo, adicione o arquivo em `content/capitulos/` e inclua
+seu nome (sem `.json`) em `order`, em `content/capitulos.json`.
 
 ## Mudando código
 
