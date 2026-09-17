@@ -72,7 +72,7 @@
         {
           "id": "c3-b1-task",
           "category": "task",
-          "text": "Sugira ideias de presente para ele."
+          "text": "Sugira ideias de presente para o meu pai."
         },
         {
           "id": "c3-b1-format",
@@ -97,7 +97,7 @@
           "feedback": "Isso apaga tudo o que você acabou de explicar. Se qualquer coisa serve, a IA devolve ideias genéricas, e não era isso que você queria."
         }
       ],
-      "successFeedback": "Pedido redondo: você contou quem é a pessoa e quanto pode gastar, disse o que quer que a IA faça e como quer receber a resposta.",
+      "successFeedback": "Pedido redondo: tem contexto, tarefa e formato. Quanto mais você contar sobre a pessoa, mais certeiras ficam as ideias.",
       "resultPreview": "Boas ideias para o seu pai, dentro dos 150 reais: 1. Uma caixa organizadora de anzóis e iscas, para ele parar de perder tudo no fundo da bolsa. 2. Uma faca de cozinha com bom fio, que serve tanto para limpar peixe quanto para o dia a dia. 3. Um chapéu de pesca com proteção solar, leve e dobrável. 4. Um livro de receitas de peixes e frutos do mar. 5. Uma tábua de corte grande de madeira, com espaço para escoar o líquido."
     },
     {
@@ -131,22 +131,22 @@
     {
       "id": "c3-explique-o-que-nao-gostou",
       "type": "choose-prompt",
-      "situation": "Você pediu uma legenda para a foto do seu cachorro no parque. A IA mandou uma legenda cheia de emoji e com cara de propaganda, com \"imperdível\" e \"aproveite\". O que você responde?",
+      "situation": "Você pediu uma legenda para a foto do seu cachorro no parque. A IA mandou uma legenda cheia de emojis e com cara de propaganda, com \"imperdível\" e \"aproveite\". O que você responde?",
       "options": [
         {
           "text": "não gostei",
           "correct": false,
-          "feedback": "Sem dizer o motivo, a IA chuta o que mudar e pode trazer os mesmos emoji de volta. Aponte o que incomodou."
+          "feedback": "Sem dizer o motivo, a IA chuta o que mudar e pode trazer os mesmos emojis de volta. Aponte o que incomodou."
         },
         {
-          "text": "Ficou com emoji demais e com cara de propaganda. Refaça sem nenhum emoji, em tom de conversa, como se eu estivesse contando para um amigo.",
+          "text": "Ficou com emojis demais e com cara de propaganda. Refaça sem nenhum emoji, em tom de conversa, como se eu estivesse contando para um amigo.",
           "correct": true,
-          "feedback": "Você nomeou os dois problemas (emoji demais e cara de propaganda) e disse o que quer no lugar: sem emoji e em tom de conversa."
+          "feedback": "Você nomeou os dois problemas (emojis demais e cara de propaganda) e disse o que quer no lugar: sem emoji e em tom de conversa."
         },
         {
           "text": "faz outra",
           "correct": false,
-          "feedback": "\"Outra\" no mesmo estilo continua sendo propaganda com emoji. Diga o que deve mudar da primeira para a segunda."
+          "feedback": "\"Outra\" no mesmo estilo continua sendo propaganda com emojis. Diga o que deve mudar da primeira para a segunda."
         },
         {
           "text": "muda tudo",
@@ -159,13 +159,13 @@
     {
       "id": "c3-montar-com-exemplo",
       "type": "build-prompt",
-      "situation": "Você tem uma loja de roupas e responde as avaliações dos clientes. Chegou uma avaliação dizendo que o atendimento foi ótimo, mas a entrega demorou. Monte o pedido, mostrando para a IA o seu jeito de responder.",
+      "situation": "Você tem uma loja de roupas e responde às avaliações dos clientes. Chegou uma avaliação dizendo que o atendimento foi ótimo, mas a entrega demorou. Monte o pedido, mostrando para a IA o seu jeito de responder.",
       "required": ["context", "task", "example"],
       "blocks": [
         {
           "id": "c3-b2-ctx",
           "category": "context",
-          "text": "Tenho uma loja de roupas e sou eu quem responde as avaliações dos clientes."
+          "text": "Tenho uma loja de roupas e sou eu quem responde às avaliações dos clientes."
         },
         {
           "id": "c3-b2-task",
@@ -175,7 +175,7 @@
         {
           "id": "c3-b2-example",
           "category": "example",
-          "text": "Exemplo de como eu costumo responder: \"Oi! Obrigada pelo carinho. Vamos melhorar isso!\"."
+          "text": "Exemplo de como eu costumo responder: \"Oi! Obrigada pelo carinho. Vamos melhorar isso!\""
         },
         {
           "id": "c3-b2-format",

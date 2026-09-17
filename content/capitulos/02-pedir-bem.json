@@ -10,7 +10,7 @@
       "cards": [
         {
           "title": "Contexto: conte a sua situação",
-          "text": "A IA não sabe nada sobre você. Quem é você, para quem é o texto, o que você já tem em casa, quanto dinheiro tem. Duas frases de contexto mudam tudo na resposta.",
+          "text": "A IA não sabe nada sobre você. Quem é você, para quem é o texto, o que você já tem em casa, quanto você pode gastar. Duas frases de contexto mudam tudo na resposta.",
           "illustration": "🗺️"
         },
         {
@@ -84,27 +84,27 @@
     {
       "id": "c2-resumo-texto",
       "type": "choose-prompt",
-      "situation": "A escola do seu filho mandou um comunicado de três páginas sobre a festa junina. Você quer saber só o essencial: datas e o que precisa levar. O que você faz?",
+      "situation": "A escola do seu filho mandou um comunicado de três páginas sobre a festa junina. Você já colou o comunicado inteiro na conversa com a IA. Falta escrever o pedido: você quer só as datas e o que precisa levar. O que você escreve?",
       "options": [
         {
-          "text": "Escrever \"resume isso\" e apertar enviar.",
+          "text": "Resume o comunicado da escola.",
           "correct": false,
-          "feedback": "Você não colou o comunicado, então não existe \"isso\" para a IA ler. Cole o texto inteiro na mesma mensagem do pedido."
+          "feedback": "A IA só lê o que está escrito na conversa: ela não abre o e-mail nem o aplicativo da escola. Cole sempre o texto junto com o pedido."
         },
         {
-          "text": "Colar o comunicado e escrever: \"explica\".",
+          "text": "Explica isso.",
           "correct": false,
-          "feedback": "Colar o texto foi certo, mas \"explica\" é vago. Você vai receber três páginas viradas em outras três. Diga o formato e o que te interessa."
+          "feedback": "\"Explica\" é vago: você recebe três páginas viradas em outras três. Diga o formato e o que te interessa."
         },
         {
-          "text": "Colar o comunicado e escrever: \"Resuma em 3 tópicos, destacando as datas e o que eu preciso providenciar.\"",
+          "text": "Resuma em 3 tópicos, destacando as datas e o que eu preciso providenciar.",
           "correct": true,
           "feedback": "O texto colado é o contexto, \"resuma\" é a tarefa e \"3 tópicos com datas e o que providenciar\" é o formato. Você pediu exatamente o que precisa."
         },
         {
-          "text": "Colar o comunicado e escrever: \"resume em uma palavra\".",
+          "text": "Resume em uma palavra.",
           "correct": false,
-          "feedback": "Você pediu um formato, mas apertado demais: uma palavra não cabe uma data nem uma lista. Peça alguns tópicos curtos."
+          "feedback": "Você pediu um formato, mas apertado demais: em uma palavra não cabe uma data nem uma lista. Peça alguns tópicos curtos."
         }
       ],
       "resultPreview": "1. A festa junina acontece no sábado, 14 de junho, das 15h às 20h, no pátio da escola. 2. Ensaio da quadrilha na quinta, 12 de junho, às 14h; a criança precisa ir com roupa confortável. 3. Sua turma ficou responsável por levar uma garrafa de suco e um prato de doce até o dia 13."
