@@ -1,0 +1,202 @@
+{
+  "id": "03-conversar",
+  "title": "Conversar, não só perguntar",
+  "icon": "🔁",
+  "phases": [
+    {
+      "id": "c3-ida-e-volta",
+      "type": "explanation",
+      "title": "A conversa é de ida e volta",
+      "cards": [
+        {
+          "title": "A primeira resposta é um rascunho",
+          "text": "Quase ninguém acerta de primeira, nem você nem a IA. Trate o que ela escreveu como um rascunho: serve para você ver o que gostou e o que quer diferente.",
+          "illustration": "📝"
+        },
+        {
+          "title": "Você pode pedir de novo",
+          "text": "Não precisa aceitar o que veio. Basta escrever \"mais curto\", \"menos formal\", \"troque o segundo parágrafo\" ou \"me dê outras 3 opções\". A IA refaz sem reclamar.",
+          "illustration": "🔁"
+        },
+        {
+          "title": "Corrija o rumo, não recomece",
+          "text": "Se você começar tudo de novo, perde a parte boa. Diga o que não funcionou e o que quer no lugar. É mais rápido e a resposta melhora a cada volta.",
+          "illustration": "🧭"
+        }
+      ]
+    },
+    {
+      "id": "c3-mais-curto",
+      "type": "choose-prompt",
+      "situation": "Você pediu um e-mail para o síndico cobrando o conserto do portão. A IA escreveu um texto bom, educado e com o pedido de confirmação no final, mas com cinco parágrafos. O que você responde na mesma conversa?",
+      "options": [
+        {
+          "text": "não gostei",
+          "correct": false,
+          "feedback": "A IA não tem como adivinhar o que incomodou: o tamanho, o tom, o conteúdo? Diga o que você quer diferente."
+        },
+        {
+          "text": "Ficou bom. Deixe pela metade do tamanho e mantenha o pedido de confirmação no final.",
+          "correct": true,
+          "feedback": "Você disse o que estava bom, o que mudar (metade do tamanho) e o que preservar (o pedido de confirmação). É assim que se ajusta um rascunho."
+        },
+        {
+          "text": "faz de novo",
+          "correct": false,
+          "feedback": "\"De novo\" costuma trazer outro texto do mesmo tamanho. Peça a mudança concreta: mais curto, menos formal, outro final."
+        },
+        {
+          "text": "Escreva um e-mail para o síndico sobre o conserto do portão do prédio, de forma educada, pedindo confirmação no final.",
+          "correct": false,
+          "feedback": "Você recomeçou do zero e repetiu o pedido inteiro, então vai receber algo parecido. Na mesma conversa, basta pedir o ajuste."
+        }
+      ],
+      "resultPreview": "Prezado síndico, boa tarde. O portão da garagem continua travando e já ficou aberto duas noites nesta semana, o que preocupa os moradores. Gostaria de saber se o conserto já foi agendado. Pode me confirmar, por favor?"
+    },
+    {
+      "id": "c3-montar-pedido-primeiro",
+      "type": "build-prompt",
+      "situation": "Seu pai faz 70 anos no mês que vem. Ele adora pescar e cozinhar, e você pode gastar até R$ 150. Monte o pedido para a IA sugerir presentes.",
+      "required": ["context", "task", "format"],
+      "blocks": [
+        {
+          "id": "c3-b1-ctx-pai",
+          "category": "context",
+          "text": "Meu pai vai fazer 70 anos e gosta muito de pescaria e de cozinhar."
+        },
+        {
+          "id": "c3-b1-ctx-grana",
+          "category": "context",
+          "text": "Posso gastar até 150 reais."
+        },
+        {
+          "id": "c3-b1-task",
+          "category": "task",
+          "text": "Sugira ideias de presente para ele."
+        },
+        {
+          "id": "c3-b1-format",
+          "category": "format",
+          "text": "Liste 5 opções, com uma frase explicando cada uma."
+        },
+        {
+          "id": "c3-b1-tone",
+          "category": "tone",
+          "text": "Fale comigo em tom descontraído."
+        },
+        {
+          "id": "c3-b1-noise-endereco",
+          "category": "noise",
+          "text": "Ele mora na Rua das Flores, 123.",
+          "feedback": "O endereço não ajuda a escolher presente nenhum e é um dado pessoal. Nunca coloque endereço, telefone ou documento numa conversa com a IA."
+        },
+        {
+          "id": "c3-b1-noise-qualquer",
+          "category": "noise",
+          "text": "Qualquer coisa serve.",
+          "feedback": "Isso apaga tudo o que você acabou de explicar. Se qualquer coisa serve, a IA devolve ideias genéricas, e não era isso que você queria."
+        }
+      ],
+      "successFeedback": "Pedido redondo: você contou quem é a pessoa e quanto pode gastar, disse o que quer que a IA faça e como quer receber a resposta.",
+      "resultPreview": "Boas ideias para o seu pai, dentro dos 150 reais: 1. Uma caixa organizadora de anzóis e iscas, para ele parar de perder tudo no fundo da bolsa. 2. Uma faca de cozinha com bom fio, que serve tanto para limpar peixe quanto para o dia a dia. 3. Um chapéu de pesca com proteção solar, leve e dobrável. 4. Um livro de receitas de peixes e frutos do mar. 5. Uma tábua de corte grande de madeira, com espaço para escoar o líquido."
+    },
+    {
+      "id": "c3-pedir-opcoes",
+      "type": "choose-prompt",
+      "situation": "Você vende bolo de cenoura caseiro para os vizinhos e quer um nome para anunciar no grupo do bairro. Você está indeciso e quer escolher entre várias ideias. O que você escreve?",
+      "options": [
+        {
+          "text": "um nome pro meu bolo",
+          "correct": false,
+          "feedback": "Você vai receber um nome só e ficar preso a ele. Peça uma quantidade: 8 opções, 10 opções."
+        },
+        {
+          "text": "Me dê 8 opções de nome para um bolo de cenoura caseiro que eu vendo no bairro, do mais tradicional ao mais divertido.",
+          "correct": true,
+          "feedback": "Você pediu quantidade (8), deu o contexto (bolo de cenoura caseiro vendido no bairro) e ainda pediu variedade: do tradicional ao divertido."
+        },
+        {
+          "text": "nome de bolo",
+          "correct": false,
+          "feedback": "Falta quase tudo: que bolo, para quê, quantos nomes. A IA vai chutar e você vai receber nomes que não têm nada a ver com o seu."
+        },
+        {
+          "text": "Qual é o melhor nome para o meu bolo de cenoura caseiro?",
+          "correct": false,
+          "feedback": "\"O melhor\" não existe, e a IA vai cravar um só, com ares de certeza. Peça várias opções e escolha você."
+        }
+      ],
+      "resultPreview": "1. Bolo da Vovó. 2. Cenoura Caseira. 3. Bolo de Cenoura da Vizinhança. 4. Fatia de Domingo. 5. Cenourinha com Cobertura. 6. Bolo do Corredor. 7. Cenoura Feliz. 8. Chocolate em Cima, Amor Embaixo."
+    },
+    {
+      "id": "c3-explique-o-que-nao-gostou",
+      "type": "choose-prompt",
+      "situation": "Você pediu uma legenda para a foto do seu cachorro no parque. A IA mandou uma legenda cheia de emoji e com cara de propaganda, com \"imperdível\" e \"aproveite\". O que você responde?",
+      "options": [
+        {
+          "text": "não gostei",
+          "correct": false,
+          "feedback": "Sem dizer o motivo, a IA chuta o que mudar e pode trazer os mesmos emoji de volta. Aponte o que incomodou."
+        },
+        {
+          "text": "Ficou com emoji demais e com cara de propaganda. Refaça sem nenhum emoji, em tom de conversa, como se eu estivesse contando para um amigo.",
+          "correct": true,
+          "feedback": "Você nomeou os dois problemas (emoji demais e cara de propaganda) e disse o que quer no lugar: sem emoji e em tom de conversa."
+        },
+        {
+          "text": "faz outra",
+          "correct": false,
+          "feedback": "\"Outra\" no mesmo estilo continua sendo propaganda com emoji. Diga o que deve mudar da primeira para a segunda."
+        },
+        {
+          "text": "muda tudo",
+          "correct": false,
+          "feedback": "Mudar tudo joga fora também o que estava bom. Diga o que sobra e o que sai: o assunto fica, o tom muda."
+        }
+      ],
+      "resultPreview": "Levei ele para dar uma volta no parque e ele não quis mais ir embora. Sentou na grama, olhou para o horizonte e fingiu que não me ouvia chamando."
+    },
+    {
+      "id": "c3-montar-com-exemplo",
+      "type": "build-prompt",
+      "situation": "Você tem uma loja de roupas e responde as avaliações dos clientes. Chegou uma avaliação dizendo que o atendimento foi ótimo, mas a entrega demorou. Monte o pedido, mostrando para a IA o seu jeito de responder.",
+      "required": ["context", "task", "example"],
+      "blocks": [
+        {
+          "id": "c3-b2-ctx",
+          "category": "context",
+          "text": "Tenho uma loja de roupas e sou eu quem responde as avaliações dos clientes."
+        },
+        {
+          "id": "c3-b2-task",
+          "category": "task",
+          "text": "Escreva uma resposta para esta avaliação: \"Atendimento ótimo, mas demorou a entrega\"."
+        },
+        {
+          "id": "c3-b2-example",
+          "category": "example",
+          "text": "Exemplo de como eu costumo responder: \"Oi! Obrigada pelo carinho. Vamos melhorar isso!\"."
+        },
+        {
+          "id": "c3-b2-format",
+          "category": "format",
+          "text": "Responda em até 3 frases."
+        },
+        {
+          "id": "c3-b2-noise-dados",
+          "category": "noise",
+          "text": "A cliente se chama Marina Souza e o telefone dela é 11 99999-0000.",
+          "feedback": "Esses são dados de outra pessoa e não ajudam em nada na resposta. Não cole nome completo, telefone ou endereço de clientes numa conversa com a IA."
+        },
+        {
+          "id": "c3-b2-noise-agressivo",
+          "category": "noise",
+          "text": "Responda de forma agressiva.",
+          "feedback": "Isso briga com o exemplo que você mesmo deu, que é gentil. Quando o pedido se contradiz, a IA escolhe um lado e você perde o controle do tom."
+        }
+      ],
+      "successFeedback": "Você contou a sua situação, deu a tarefa com a avaliação inteira colada e mostrou um exemplo do seu jeito de escrever. O exemplo é o que faz a resposta sair com a sua cara.",
+      "resultPreview": "Oi! Que bom saber que o atendimento agradou, obrigada pelo carinho. Sobre a entrega, você tem razão, demorou mais do que deveria e já estamos ajustando isso com a transportadora. Espero te atender de novo em breve!"
+    }
+  ]
+}
