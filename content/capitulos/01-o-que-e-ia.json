@@ -1,0 +1,115 @@
+{
+  "id": "01-o-que-e-ia",
+  "title": "O que é uma IA de conversa",
+  "icon": "💬",
+  "phases": [
+    {
+      "id": "c1-o-que-e",
+      "type": "explanation",
+      "title": "Um programa que continua textos",
+      "cards": [
+        {
+          "title": "Não é mágica, é previsão",
+          "text": "Claude, ChatGPT e Gemini são programas que leram uma quantidade enorme de textos e aprenderam a prever qual palavra costuma vir depois da outra. Quando você escreve algo, eles continuam o texto da forma mais provável.",
+          "illustration": "✍️"
+        },
+        {
+          "title": "Não é uma pessoa",
+          "text": "Parece uma conversa porque o programa foi treinado para responder como uma pessoa responderia. Mas ele não tem opinião, não se lembra de você entre conversas e não sabe o que aconteceu hoje, a menos que você conte.",
+          "illustration": "🙂"
+        },
+        {
+          "title": "Não é um buscador",
+          "text": "O Google procura páginas que já existem. A IA de conversa cria um texto novo na hora. Por isso ela é ótima para escrever, resumir e explicar, e menos confiável para dar um telefone, um endereço ou uma data exata.",
+          "illustration": "🔍"
+        }
+      ]
+    },
+    {
+      "id": "c1-erra-com-confianca",
+      "type": "explanation",
+      "title": "Por que ela erra com tanta confiança",
+      "cards": [
+        {
+          "title": "O texto mais provável nem sempre é o verdadeiro",
+          "text": "Como a IA monta a resposta pela forma como as frases costumam ser, ela pode escrever algo que soa perfeito e está errado. Isso tem nome: alucinação. Não é mentira nem defeito raro, é parte de como ela funciona.",
+          "illustration": "🎭"
+        },
+        {
+          "title": "Ela não sabe que não sabe",
+          "text": "Uma pessoa hesita quando não tem certeza. A IA quase sempre responde no mesmo tom seguro, saiba ou não. Cabe a você desconfiar quando o assunto é fato, número, nome ou data. Vamos treinar isso num capítulo só sobre isso.",
+          "illustration": "🧭"
+        }
+      ]
+    },
+    {
+      "id": "c1-frases-nao-palavras",
+      "type": "choose-prompt",
+      "situation": "É a sua primeira vez usando uma IA de conversa. Você quer ajuda para escrever uma mensagem de aniversário para sua irmã, que adora praia. O que você escreve?",
+      "options": [
+        {
+          "text": "mensagem aniversario irma",
+          "correct": false,
+          "feedback": "Isso é jeito de buscar no Google. A IA de conversa funciona melhor quando você fala com ela em frases, como falaria com uma pessoa que vai te ajudar."
+        },
+        {
+          "text": "Me ajuda a escrever uma mensagem de aniversário para minha irmã? Ela adora praia e a gente é bem próxima.",
+          "correct": true,
+          "feedback": "Você falou em frases, disse o que quer e deu dois detalhes que só você sabia: praia e proximidade. Com isso a IA consegue escrever algo que parece seu."
+        },
+        {
+          "text": "Escreva uma mensagem.",
+          "correct": false,
+          "feedback": "Curto demais. Mensagem para quem? De quê? A IA vai chutar e você vai receber algo genérico que não serve."
+        }
+      ],
+      "resultPreview": "Feliz aniversário, minha irmã de mar e sol! Que este ano traga mais tardes de praia, mais risadas e mais motivos para a gente estar junto. Te amo demais!"
+    },
+    {
+      "id": "c1-ferramenta-certa",
+      "type": "choose-prompt",
+      "situation": "Sua mãe toma dois remédios e você quer saber se pode tomar os dois juntos. Qual é o melhor uso da IA aqui?",
+      "options": [
+        {
+          "text": "Minha mãe pode tomar losartana com ibuprofeno? Responda só sim ou não.",
+          "correct": false,
+          "feedback": "Perigoso. Você está pedindo uma decisão de saúde a um programa que prevê texto e pode errar. Uma resposta curta e confiante não é garantia de nada."
+        },
+        {
+          "text": "Explique de forma simples o que faz cada um desses remédios: losartana e ibuprofeno. Depois, liste perguntas que eu deveria fazer ao farmacêutico ou médico sobre tomar os dois juntos.",
+          "correct": true,
+          "feedback": "Você usou a IA para se preparar, não para decidir. Entender os remédios e chegar com boas perguntas ao profissional é um uso seguro e útil."
+        },
+        {
+          "text": "Me passa o telefone de um farmacêutico de plantão perto de mim.",
+          "correct": false,
+          "feedback": "A IA não sabe onde você está e pode inventar um número que parece real. Para telefone e endereço, use o buscador ou o app da farmácia."
+        }
+      ],
+      "resultPreview": "A losartana é usada para controlar a pressão arterial. O ibuprofeno é um anti-inflamatório para dor e inflamação. Perguntas para levar ao farmacêutico: 1. Tomar os dois juntos pode afetar a pressão ou os rins? 2. Existe outro remédio para dor mais indicado para quem usa losartana? 3. Há algum sinal de alerta que devo observar?"
+    },
+    {
+      "id": "c1-cada-conversa-do-zero",
+      "type": "choose-prompt",
+      "situation": "Ontem a IA te ajudou a montar um cardápio da semana com frango e legumes. Hoje você abriu uma conversa nova e quer trocar o jantar de quarta. O que você escreve?",
+      "options": [
+        {
+          "text": "Troca o jantar de quarta.",
+          "correct": false,
+          "feedback": "Numa conversa nova, a IA não sabe do que você está falando. Ela não lembra do cardápio de ontem. Vai perguntar de volta ou inventar um cardápio."
+        },
+        {
+          "text": "Lembra do cardápio que você fez pra mim ontem? Muda a quarta.",
+          "correct": false,
+          "feedback": "Ela não lembra. Cada conversa nova começa do zero, a menos que a ferramenta tenha um recurso de memória ligado, e mesmo assim não dá para contar com isso."
+        },
+        {
+          "text": "Ontem montei um cardápio da semana com frango e legumes. Na quarta o jantar era frango grelhado com brócolis. Sugira outra opção para quarta, sem carne vermelha, e que use ingredientes parecidos.",
+          "correct": true,
+          "feedback": "Você trouxe o contexto de volta em duas frases e disse exatamente o que quer. É assim que se continua um assunto em uma conversa nova."
+        }
+      ],
+      "resultPreview": "Que tal um escondidinho de frango com purê de couve-flor? Usa o frango que você já tem, troca o brócolis por couve-flor e fica pronto em uns 40 minutos."
+    }
+  ]
+}
