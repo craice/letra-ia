@@ -4,15 +4,17 @@
   import { track, trackScreen } from './lib/analytics';
   import Map from './screens/Map.svelte';
   import Phase from './screens/Phase.svelte';
-  import Certificate from './screens/Certificate.svelte';
+    import Certificate from './screens/Certificate.svelte';
+  import ChapterEnd from './screens/ChapterEnd.svelte';
   import { loadChapters, validChapters } from './lib/content/load';
   import { progressStore } from './lib/progress';
-  import { isAllComplete, nextPhaseId } from './lib/progress/unlock';
+  import { findPhase, isAllComplete, nextInChapter, nextPhaseId } from './lib/progress/unlock';
 
   type Screen =
     | { name: 'start' }
     | { name: 'map' }
-    | { name: 'phase'; phaseId: string }
+      | { name: 'phase'; phaseId: string }
+    | { name: 'chapter-end'; chapterId: string }
     | { name: 'certificate' }
     | { name: 'about' };
 
@@ -27,6 +29,13 @@
     mainEl?.focus({ preventScroll: false });
   });
 
+  const endChapter = $derived.by(() => {
+    const current = screen;
+    if (current.name !== 'chapter-end') return null;
+    const index = chapters.findIndex((c) => c.id === current.chapterId);
+    return index < 0 ? null : { index, chapter: chapters[index]! };
+  });
+
   const hasProgress = $derived(Object.keys(progressStore.progress.phases).length > 0);
 
   function goToMap(): void {
@@ -34,7 +43,14 @@
   }
 
   function start(): void {
-    if (isAllComplete(chapters, progressStore.progress)) screen = { name: 'certificate' };
+    if (isAllComplete(chapters, progressStore.progress)) {
+      screen = { name: 'certificate' };
+      return;
+    }
+    // First visit lands on the map so the journey is visible once; after that,
+    // "Continuar" resumes the pending phase without a detour.
+    const next = hasProgress ? nextPhaseId(chapters, progressStore.progress) : null;
+    if (next) openPhase(next);
     else goToMap();
   }
 
@@ -43,16 +59,35 @@
   }
 
   function completePhase(phaseId: string, attempts: number): void {
+    const wasDone = phaseId in progressStore.progress.phases;
     progressStore.complete(phaseId, attempts);
     track('phase_complete', {
       phase_id: phaseId,
       attempts,
       stars: progressStore.progress.phases[phaseId]?.stars ?? 0,
     });
-    const next = nextPhaseId(chapters, progressStore.progress);
-    if (next === null) track('journey_complete');
-    if (next === null) screen = { name: 'certificate' };
-    else goToMap();
+    if (wasDone) {
+      // Replaying a finished phase: stay out of the way and go back to the map.
+      goToMap();
+      return;
+    }
+    if (nextPhaseId(chapters, progressStore.progress) === null) {
+      track('journey_complete');
+      screen = { name: 'certificate' };
+      return;
+    }
+    const inChapter = nextInChapter(chapters, phaseId);
+    if (inChapter) {
+      openPhase(inChapter);
+      return;
+    }
+    const chapterId = findPhase(chapters, phaseId)?.chapterId;
+    if (!chapterId) {
+      goToMap();
+      return;
+    }
+    track('chapter_complete', { chapter_id: chapterId });
+    screen = { name: 'chapter-end', chapterId };
   }
 
   function reset(): void {
@@ -77,6 +112,27 @@
     />
   {:else if screen.name === 'phase'}
     <Phase {chapters} phaseId={screen.phaseId} onComplete={completePhase} onBack={goToMap} />
+  {:else if screen.name === 'chapter-end'}
+    {#if endChapter}
+      <ChapterEnd
+        chapter={endChapter.chapter}
+        chapterIndex={endChapter.index}
+        total={chapters.length}
+        progress={progressStore.progress}
+        nextPhase={nextPhaseId(chapters, progressStore.progress)}
+        onContinue={openPhase}
+        onMap={goToMap}
+      />
+    {:else}
+      <Map
+        {loaded}
+        {chapters}
+        progress={progressStore.progress}
+        onOpenPhase={openPhase}
+        onHome={() => (screen = { name: 'start' })}
+        onCertificate={() => (screen = { name: 'certificate' })}
+      />
+    {/if}
   {:else}
     <Certificate
       {chapters}

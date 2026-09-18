@@ -2,7 +2,8 @@ import { describe, expect, it } from 'vitest';
 import type { Chapter } from '../src/lib/content/types';
 import { emptyProgress, recordResult } from '../src/lib/progress/model';
 import {
-  challengeNumber, findPhase, flattenPhases, isAllComplete, isChapterUnlocked, isPhaseUnlocked, nextPhaseId,
+  challengeNumber, findPhase, flattenPhases, isAllComplete, isChapterUnlocked, isPhaseUnlocked,
+  nextInChapter, nextPhaseId,
 } from '../src/lib/progress/unlock';
 
 const exp = (id: string) => ({ id, type: 'explanation' as const, title: id, cards: [{ text: 't' }] });
@@ -59,6 +60,13 @@ describe('unlock', () => {
     p = recordResult(p, 'c', 1);
     expect(nextPhaseId(chapters, p)).toBeNull();
     expect(isAllComplete(chapters, p)).toBe(true);
+  });
+
+  it('nextInChapter walks the chapter and stops at its last phase', () => {
+    expect(nextInChapter(chapters, 'a')).toBe('b');
+    expect(nextInChapter(chapters, 'b')).toBeNull();
+    expect(nextInChapter(chapters, 'c')).toBeNull();
+    expect(nextInChapter(chapters, 'zzz')).toBeNull();
   });
 
   it('findPhase', () => {

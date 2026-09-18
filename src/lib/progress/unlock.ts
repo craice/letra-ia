@@ -32,6 +32,18 @@ export function isChapterUnlocked(chapters: Chapter[], p: Progress, chapterId: s
   return first ? isPhaseUnlocked(chapters, p, first.id) : false;
 }
 
+/**
+ * The phase that follows `phaseId` inside the same chapter, or null when
+ * `phaseId` is the chapter's last phase (or is unknown). Used to chain phases
+ * together so the map is not a mandatory stop between them.
+ */
+export function nextInChapter(chapters: Chapter[], phaseId: string): string | null {
+  const found = findPhase(chapters, phaseId);
+  if (!found) return null;
+  const phases = chapters[found.chapterIndex]!.phases;
+  return phases[found.phaseIndex + 1]?.id ?? null;
+}
+
 export function nextPhaseId(chapters: Chapter[], p: Progress): string | null {
   return flattenPhases(chapters).find((f) => !(f.phase.id in p.phases))?.phase.id ?? null;
 }
